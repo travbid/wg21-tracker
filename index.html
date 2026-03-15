@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Standard Tracker</title>
+    <style>
+        :root {
+            --bg: #f4f4f5;
+            --text: #18181b;
+            --accent: #2563eb;
+            --card-bg: #ffffff;
+            --border: #e4e4e7;
+            --meta-text: #71717a;
+            --core-badge: #059669;
+            --lib-badge: #d97706;
+            --core-dr-badge: #0f766e;
+            --lib-dr-badge: #c2410c;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #18181b;
+                --text: #f4f4f5;
+                --accent: #60a5fa;
+                --card-bg: #27272a;
+                --border: #3f3f46;
+                --meta-text: #a1a1aa;
+                --core-badge: #10b981;
+                --lib-badge: #fbbf24;
+                --core-dr-badge: #14b8a6;
+                --lib-dr-badge: #f97316;
+            }
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4 { margin-bottom: 0.5rem; }
+        
+        .header-section {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-group { margin-bottom: 2rem; }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            white-space: nowrap;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .badge.core { background-color: var(--core-badge); }
+        .badge.library { background-color: var(--lib-badge); color: #000; }
+        .badge.core-dr { background-color: var(--core-dr-badge); }
+        .badge.lib-dr { background-color: var(--lib-dr-badge); color: #fff; }
+        .badge.graveyard { background-color: #ef4444; }
+
+        .table-container {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .dense-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+            font-size: 0.95rem;
+        }
+
+        .dense-table th, .dense-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dense-table th {
+            background-color: var(--bg);
+            font-weight: 600;
+            color: var(--meta-text);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .dense-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Mobile: Convert table rows into stacked blocks */
+        @media (max-width: 650px) {
+            .dense-table, .dense-table tbody, .dense-table tr, .dense-table td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .dense-table thead { display: none; }
+            .dense-table tr { 
+                padding: 0.5rem 0; 
+                border-bottom: 1px solid var(--border); 
+            }
+            .dense-table td { 
+                padding: 0.25rem 1rem; 
+                border: none; 
+                text-align: left !important; 
+            }
+        }
+
+        .paper-meta {
+            font-size: 0.875rem;
+            color: var(--meta-text);
+        }
+
+        #graveyard-section {
+            margin-top: 4rem;
+            opacity: 0.8;
+            filter: grayscale(80%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>C++ Standard Tracker</h1>
+        <p class="paper-meta">Tracking the latest plenary approvals for the working draft.</p>
+    </div>
+
+    <main>
+        <div id="meetings-container">
+            <p class="paper-meta" id="batch-date-info">Fetching latest data...</p>
+        </div>
+
+        <section id="graveyard-section">
+            <h2>The Graveyard</h2>
+            <p class="paper-meta">Papers previously voted in, but formally reverted in this cycle.</p>
+            <div id="graveyard-container">
+                <p><em>No recent reversions detected.</em></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        async function loadTrackerData() {
+            try {
+                // Fetch the JSON generated by our Python script
+                const response = await fetch('cpp_status_baseline.json');
+                const data = await response.json();
+
+                const container = document.getElementById('meetings-container');
+
+                if (data.length === 0) {
+                    container.innerHTML = '<p class="paper-meta">No papers found.</p>';
+                    return;
+                }
+
+                const activeMeetings = data.filter(m => m.meeting_name !== 'Graveyard');
+                const graveyardMeeting = data.find(m => m.meeting_name === 'Graveyard');
+
+                container.innerHTML = activeMeetings.map(meeting => {
+                    const sortByDR = (a, b) => {
+                        const aIsDR = a.category.includes('Defect');
+                        const bIsDR = b.category.includes('Defect');
+                        if (aIsDR && !bIsDR) return 1;
+                        if (!aIsDR && bIsDR) return -1;
+                        return 0;
+                    };
+
+                    const renderTargetSection = (targetName, targetPapers) => {
+                        if (targetPapers.length === 0) return '';
+                        
+                        const corePapers = targetPapers.filter(p => p.category.includes('Core')).sort(sortByDR);
+                        const libPapers = targetPapers.filter(p => p.category.includes('Library') || p.category.includes('Other')).sort(sortByDR);
+
+                        let html = `
+                            <div class="target-group" style="margin-bottom: 2rem;">
+                                <h3 style="border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">${targetName}</h3>`;
+                                
+                        if (corePapers.length > 0) {
+                            html += `
+                                <div class="category-group" style="margin-bottom: 2rem; margin-left: 1rem;">
+                                    <h4>Core Language</h4>
+                                    ${renderPapersTable(corePapers, '')}
+                                </div>`;
+                        }
+
+                        if (libPapers.length > 0) {
+                            html += `
+                                <div class="category-group" style="margin-left: 1rem;">
+                                    <h4>Standard Library</h4>
+                                    ${renderPapersTable(libPapers, '')}
+                                </div>`;
+                        }
+
+                        html += `</div>`;
+                        return html;
+                    };
+
+                    // Ensure older data without a target defaults to C++26
+                    meeting.papers.forEach(p => { if (!p.target) p.target = 'C++26'; });
+                    
+                    // Find unique targets and sort descending (e.g., C++29, C++26)
+                    const uniqueTargets = [...new Set(meeting.papers.map(p => p.target))].sort().reverse();
+
+                    return `
+                        <section style="margin-bottom: 4rem;">
+                            <div style="border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; padding-bottom: 0.5rem;">
+                                <h2 style="margin-bottom: 0;">${meeting.meeting_name}</h2>
+                                ${meeting.meeting_date ? `<p class="paper-meta" style="margin-top: 0.25rem;">${meeting.meeting_date}</p>` : ''}
+                            </div>
+
+                            ${uniqueTargets.map(targetName => {
+                                const targetPapers = meeting.papers.filter(p => p.target === targetName);
+                                return renderTargetSection(targetName, targetPapers);
+                            }).join('')}
+                        </section>
+                    `;
+                }).join('');
+
+                if (graveyardMeeting && graveyardMeeting.papers.length > 0) {
+                    document.getElementById('graveyard-container').innerHTML = 
+                        renderPapersTable(graveyardMeeting.papers, '', true);
+                }
+
+            } catch (error) {
+                console.error("Failed to load or parse paper data:", error);
+                document.getElementById('meetings-container').innerHTML = `<span style="color: #ef4444;">Error loading data. Ensure 'cpp_status_baseline.json' is in the same directory.</span>`;
+            }
+        }
+
+        function renderPapersTable(papers, emptyMessage, isGraveyard = false) {
+            if (papers.length === 0) {
+                return `<p class="paper-meta"><em>${emptyMessage}</em></p>`;
+            }
+
+            const rows = papers.map(paper => {
+                // Determine badge styling based on category
+                let badgeClass = '';
+                if (isGraveyard) {
+                    badgeClass = 'graveyard';
+                } else if (paper.category === 'Core Defect Report') {
+                    badgeClass = 'core-dr';
+                } else if (paper.category === 'Library Defect Report') {
+                    badgeClass = 'lib-dr';
+                } else if (paper.category.includes('Core')) {
+                    badgeClass = 'core';
+                } else {
+                    badgeClass = 'library';
+                }
+
+                return `
+                    <tr>
+                        <td style="white-space: nowrap;"><a href="${paper.paper_url}" target="_blank" rel="noopener noreferrer">${paper.number}</a></td>
+                        <td>${paper.title}</td>
+                        <td><span class="badge ${badgeClass}">${paper.category}</span></td>
+                        <td style="text-align: center;"><a href="${paper.url}" target="_blank" rel="noopener noreferrer" title="GitHub Issue">🐙</a></td>
+                    </tr>
+                `;
+            }).join('');
+
+            return `
+                <div class="table-container">
+                    <table class="dense-table">
+                        <thead>
+                            <tr>
+                                <th>Paper</th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th style="text-align: center;">Issue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${rows}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', loadTrackerData);
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+#!/usr/bin/env python3
+
+import urllib.request
+import urllib.parse
+import json
+import time
+import os
+import re
+from datetime import datetime
+
+def fetch_approved_papers():
+    papers = {}
+    
+    for target_std in ["C++26", "C++29"]:
+        page = 1
+        print(f"Fetching {target_std} data from GitHub API...")
+        while True:
+            # Search query: closed issues in target_std with plenary-approved label
+            query = f"repo:cplusplus/papers label:{target_std} label:plenary-approved state:closed"
+            url = f"https://api.github.com/search/issues?q={urllib.parse.quote(query)}&per_page=100&page={page}"
+            
+            req = urllib.request.Request(url, headers={'User-Agent': 'Cpp-Tracker'})
+            
+            try:
+                with urllib.request.urlopen(req) as response:
+                    data = json.loads(response.read().decode())
+            except urllib.error.HTTPError as e:
+                print(f"HTTP Error: {e.code}")
+                break
+                
+            items = data.get('items', [])
+            if not items:
+                break
+                
+            for issue in items:
+                labels = [lbl['name'] for lbl in issue.get('labels', [])]
+                
+                paper_number = issue['title'].split()[0]
+                
+                # Strip the leading paper number and optional revision (e.g., "P1234 " or "P1234 R1 ")
+                clean_title = re.sub(r"^\S+(?:\s+R\d+)?\s+", "", issue['title'])
+                
+                # Categorize based on WG tags
+                category = "Other / Uncategorized"
+                if paper_number.startswith('CWG'):
+                    category = "Core Defect Report"
+                elif paper_number.startswith('LWG'):
+                    category = "Library Defect Report"
+                elif "EWG" in labels or "CWG" in labels:
+                    category = "Core Language"
+                elif "LEWG" in labels or "LWG" in labels:
+                    category = "Standard Library"
+
+                paper_link = f"https://wg21.link/{paper_number.lower()}"
+                
+                # Use paper_number as key to deduplicate if a paper is tagged with both
+                papers[paper_number] = {
+                    "number": paper_number,
+                    "title": clean_title,
+                    "url": issue['html_url'],
+                    "paper_url": paper_link,
+                    "closed_at": issue['closed_at'],
+                    "category": category,
+                    "target": target_std
+                }
+                
+            if len(items) < 100:
+                break
+                
+            page += 1
+            time.sleep(2) # Respect GitHub's unauthenticated rate limits
+            
+    return list(papers.values())
+
+if __name__ == "__main__":
+    # (Meeting Name, Start Date YYYY-MM-DD)
+    # Papers are grouped by the most recent meeting they were closed on or after.
+    # Sorted from oldest to newest. This list can be updated as new meetings conclude.
+    MEETINGS = [
+        ("2023-02-06", "Issaquah 2023"),
+        ("2023-06-12", "Varna 2023"),
+        ("2023-11-06", "Kona 2023"),
+        ("2024-03-18", "Tokyo 2024"),
+        ("2024-06-24", "St. Louis 2024"),
+        ("2024-11-18", "Wrocław 2024"),
+        ("2025-02-10", "Hagenberg 2025"),
+        ("2025-06-16", "Sofia 2025"),
+        ("2025-11-03", "Kona 2025"),
+    ]
+
+    all_papers = fetch_approved_papers()
+    
+    # Create a dictionary to hold the papers for each batch
+    batches = {
+        name: {
+            "meeting_name": name,
+            "meeting_date": datetime.strptime(date_str, "%Y-%m-%d").strftime("%Y-%m"),
+            "papers": []
+        } for date_str, name in MEETINGS
+    }
+    unassigned_papers = []
+
+    # Convert meeting start dates to datetime objects and sort from newest to oldest
+    meeting_starts = [(name, datetime.strptime(date_str, "%Y-%m-%d")) for date_str, name in MEETINGS]
+    meeting_starts.sort(key=lambda x: x[1], reverse=True)
+
+    for paper in all_papers:
+        paper_date = datetime.strptime(paper['closed_at'], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=None)
+
+        assigned = False
+        for name, start_date in meeting_starts:
+            # If paper was closed on or after the meeting start date, assign it to that meeting
+            if paper_date >= start_date:
+                batches[name]['papers'].append(paper)
+                assigned = True
+                break
+        
+        if not assigned:
+            # Paper is older than the oldest meeting in the list
+            unassigned_papers.append(paper)
+
+    # Assemble the final list for JSON output, in reverse chronological order
+    final_data = []
+
+    # Add the official meeting batches in reverse chronological order (based on original MEETINGS list order)
+    for _, name in reversed(MEETINGS):
+        batch = batches[name]
+        if batch["papers"]:
+            # Sort papers within the batch by their closed_at date, then number, for consistent output
+            batch["papers"].sort(key=lambda p: (p['closed_at'], p['number']))
+            final_data.append(batch)
+
+    # If any papers were too old to be assigned, add them to a separate group at the end
+    if unassigned_papers:
+        unassigned_papers.sort(key=lambda p: (p['closed_at'], p['number']))
+        final_data.append({
+            "meeting_name": "Older Papers",
+            "meeting_date": "",
+            "papers": unassigned_papers
+        })
+
+    # Load baseline JSON to compare and handle the Graveyard
+    old_data = []
+    try:
+        with open('cpp_status_baseline.json', 'r') as f:
+            old_data = json.load(f)
+    except FileNotFoundError:
+        pass
+
+    old_active_batches = [b for b in old_data if b.get("meeting_name") != "Graveyard"]
+    old_graveyard = next((b.get("papers", []) for b in old_data if b.get("meeting_name") == "Graveyard"), [])
+
+    old_active_papers = {p['number']: p for b in old_active_batches for p in b.get('papers', [])}
+    new_active_papers = {p['number']: p for b in final_data for p in b.get('papers', [])}
+
+    new_graveyard_papers = [p for num, p in old_active_papers.items() if num not in new_active_papers]
+    
+    combined_graveyard = old_graveyard + new_graveyard_papers
+
+    data_differs = old_data and (old_active_batches != final_data)
+
+    if data_differs:
+        timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+        backup_filename = f"cpp_status_baseline-{timestamp}.json"
+        os.rename('cpp_status_baseline.json', backup_filename)
+        print(f"Changes detected. Backed up previous baseline to {backup_filename}")
+
+    if combined_graveyard:
+        combined_graveyard.sort(key=lambda p: (p.get('closed_at', ''), p['number']))
+        final_data.append({
+            "meeting_name": "Graveyard",
+            "meeting_date": "",
+            "papers": combined_graveyard
+        })
+
+    with open('cpp_status_baseline.json', 'w') as f:
+        json.dump(final_data, f, indent=2)
+        
+    print(f"Successfully saved {len(all_papers)} papers into {len(final_data)} batches to cpp_status_baseline.json")
