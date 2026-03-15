@@ -253,6 +253,14 @@
                 return `<p class="paper-meta"><em>${emptyMessage}</em></p>`;
             }
 
+            const escapeHTML = (str) => {
+                return (str || '').replace(/&/g, '&amp;')
+                                  .replace(/</g, '&lt;')
+                                  .replace(/>/g, '&gt;')
+                                  .replace(/"/g, '&quot;')
+                                  .replace(/'/g, '&#39;');
+            };
+
             const rows = papers.map(paper => {
                 // Determine badge styling based on category
                 let badgeClass = '';
@@ -271,7 +279,7 @@
                 return `
                     <tr>
                         <td style="white-space: nowrap;"><a href="${paper.paper_url}" target="_blank" rel="noopener noreferrer">${paper.number}</a></td>
-                        <td>${paper.title}</td>
+                        <td>${escapeHTML(paper.title)}</td>
                         <td><span class="badge ${badgeClass}">${paper.category}</span></td>
                         <td style="text-align: center;"><a href="${paper.url}" target="_blank" rel="noopener noreferrer" title="GitHub Issue">🐙</a></td>
                     </tr>
