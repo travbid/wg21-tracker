@@ -7,6 +7,7 @@ import time
 import os
 import re
 import sys
+import html
 from datetime import datetime
 
 def fetch_approved_papers():
@@ -46,6 +47,7 @@ def fetch_approved_papers():
                 
                 # Strip the leading paper number and optional revision (e.g., "P1234 " or "P1234 R1 ")
                 clean_title = re.sub(r"^\S+(?:\s+R\d+)?\s+", "", issue['title'])
+                clean_title = html.unescape(clean_title)
                 
                 # Categorize based on WG tags
                 category = "Other / Uncategorized"
