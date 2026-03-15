@@ -155,7 +155,7 @@
       },
       {
         "number": "P3491",
-        "title": "define_static_&#123;string,object,array&#125;",
+        "title": "define_static_{string,object,array}",
         "url": "https://github.com/cplusplus/papers/issues/2158",
         "paper_url": "https://wg21.link/p3491",
         "closed_at": "2025-07-14T21:19:58Z",
@@ -503,7 +503,7 @@
       },
       {
         "number": "P3074",
-        "title": "trivial unions (was std::uninitialized&lt;T&gt;)",
+        "title": "trivial unions (was std::uninitialized<T>)",
         "url": "https://github.com/cplusplus/papers/issues/1734",
         "paper_url": "https://wg21.link/p3074",
         "closed_at": "2025-02-24T13:41:31Z",
@@ -1133,7 +1133,7 @@
       },
       {
         "number": "P2573",
-        "title": "= delete(&quot;should have a reason&quot;);",
+        "title": "= delete(\"should have a reason\");",
         "url": "https://github.com/cplusplus/papers/issues/1229",
         "paper_url": "https://wg21.link/p2573",
         "closed_at": "2024-04-15T23:22:10Z",
