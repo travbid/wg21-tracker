@@ -4,123 +4,136 @@
     "meeting_date": "2025-11",
     "papers": [
       {
-        "number": "P3920",
-        "title": "Wording for NB comment resolution on trivial relocation",
-        "url": "https://github.com/cplusplus/papers/issues/2539",
-        "paper_url": "https://wg21.link/p3920",
-        "closed_at": "2025-12-13T18:07:38Z",
-        "category": "Core Language",
-        "target": "C++26",
-        "status": "reversion",
-        "note": "Reverts P2786 (Trivial Relocatability)"
-      },
-      {
         "number": "P3868",
         "title": "Allow #line before module declarations",
         "url": "https://github.com/cplusplus/papers/issues/2472",
         "paper_url": "https://wg21.link/p3868",
-        "closed_at": "2025-12-13T18:38:53Z",
+        "closed_at": "2025-11-09T19:34:39Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3684",
         "title": "Fix erroneous behaviour termination semantics for C++26",
         "url": "https://github.com/cplusplus/papers/issues/2445",
         "paper_url": "https://wg21.link/p3684",
-        "closed_at": "2025-12-13T18:53:05Z",
+        "closed_at": "2025-11-09T19:34:44Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3920",
+        "title": "Wording for NB comment resolution on trivial relocation",
+        "url": "https://github.com/cplusplus/papers/issues/2539",
+        "paper_url": "https://wg21.link/p3920",
+        "closed_at": "2025-11-09T19:35:16Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed",
+        "status": "reversion",
+        "note": "Reverts P2786 (Trivial Relocatability)"
       },
       {
         "number": "CWG2917",
         "title": "Disallow multiple friend-type-specifiers for a friend template",
         "url": "https://github.com/cplusplus/papers/issues/2032",
         "paper_url": "https://wg21.link/cwg2917",
-        "closed_at": "2025-12-13T21:37:48Z",
+        "closed_at": "2025-11-09T19:35:40Z",
         "category": "Core Defect Report",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P1789",
         "title": "Library Support for Expansion Statements",
         "url": "https://github.com/cplusplus/papers/issues/535",
         "paper_url": "https://wg21.link/p1789",
-        "closed_at": "2025-12-14T23:00:46Z",
+        "closed_at": "2025-11-13T19:42:43Z",
         "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3860",
-        "title": "Proposed Resolution for NB Comment GB13-309 atomic_ref is not convertible to atomic_ref",
-        "url": "https://github.com/cplusplus/papers/issues/2464",
-        "paper_url": "https://wg21.link/p3860",
-        "closed_at": "2025-12-16T07:14:13Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3836",
-        "title": "Make optional<T> trivially copyable (NB comment US 134-215)",
-        "url": "https://github.com/cplusplus/papers/issues/2441",
-        "paper_url": "https://wg21.link/p3836",
-        "closed_at": "2025-12-16T07:16:49Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3388",
-        "title": "When Do You Know connect Doesn't Throw?",
-        "url": "https://github.com/cplusplus/papers/issues/2043",
-        "paper_url": "https://wg21.link/p3388",
-        "closed_at": "2025-12-16T07:17:46Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3371",
-        "title": "Fix C++26 by making the rank-1, rank-2, rank-k, and rank-2k updates consistent with the BLAS",
-        "url": "https://github.com/cplusplus/papers/issues/2028",
-        "paper_url": "https://wg21.link/p3371",
-        "closed_at": "2025-12-16T07:18:17Z",
-        "category": "Standard Library",
-        "target": "C++29"
-      },
-      {
-        "number": "P3391",
-        "title": "constexpr std::format",
-        "url": "https://github.com/cplusplus/papers/issues/2046",
-        "paper_url": "https://wg21.link/p3391",
-        "closed_at": "2025-12-16T07:18:46Z",
-        "category": "Standard Library",
-        "target": "C++29"
-      },
-      {
-        "number": "P3878",
-        "title": "Standard library hardening should not use the 'observe' semantic",
-        "url": "https://github.com/cplusplus/papers/issues/2532",
-        "paper_url": "https://wg21.link/p3878",
-        "closed_at": "2025-12-16T07:26:28Z",
-        "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3923",
         "title": "Additional NB comment resolutions for Kona 2025",
         "url": "https://github.com/cplusplus/papers/issues/2540",
         "paper_url": "https://wg21.link/p3923",
-        "closed_at": "2025-12-16T07:31:34Z",
+        "closed_at": "2025-11-15T19:36:51Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3860",
+        "title": "Proposed Resolution for NB Comment GB13-309 atomic_ref is not convertible to atomic_ref",
+        "url": "https://github.com/cplusplus/papers/issues/2464",
+        "paper_url": "https://wg21.link/p3860",
+        "closed_at": "2025-12-16T07:14:34Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3836",
+        "title": "Make optional<T> trivially copyable (NB comment US 134-215)",
+        "url": "https://github.com/cplusplus/papers/issues/2441",
+        "paper_url": "https://wg21.link/p3836",
+        "closed_at": "2025-12-16T07:16:33Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3388",
+        "title": "When Do You Know connect Doesn't Throw?",
+        "url": "https://github.com/cplusplus/papers/issues/2043",
+        "paper_url": "https://wg21.link/p3388",
+        "closed_at": "2025-12-16T07:17:39Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3371",
+        "title": "Fix C++26 by making the rank-1, rank-2, rank-k, and rank-2k updates consistent with the BLAS",
+        "url": "https://github.com/cplusplus/papers/issues/2028",
+        "paper_url": "https://wg21.link/p3371",
+        "closed_at": "2025-12-16T07:18:07Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3391",
+        "title": "constexpr std::format",
+        "url": "https://github.com/cplusplus/papers/issues/2046",
+        "paper_url": "https://wg21.link/p3391",
+        "closed_at": "2025-12-16T07:18:41Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3878",
+        "title": "Standard library hardening should not use the 'observe' semantic",
+        "url": "https://github.com/cplusplus/papers/issues/2532",
+        "paper_url": "https://wg21.link/p3878",
+        "closed_at": "2025-12-16T07:25:59Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3016",
         "title": "Resolve inconsistencies in begin/end for valarray and braced initializer lists",
         "url": "https://github.com/cplusplus/papers/issues/1678",
         "paper_url": "https://wg21.link/p3016",
-        "closed_at": "2025-12-26T12:30:16Z",
+        "closed_at": "2025-12-26T11:40:19Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       }
     ]
   },
@@ -129,301 +142,394 @@
     "meeting_date": "2025-06",
     "papers": [
       {
-        "number": "P3618",
-        "title": "Allow attaching main to the global module",
-        "url": "https://github.com/cplusplus/papers/issues/2237",
-        "paper_url": "https://wg21.link/p3618",
-        "closed_at": "2025-07-07T12:27:34Z",
+        "number": "P1306",
+        "title": "Expansion statements",
+        "url": "https://github.com/cplusplus/papers/issues/156",
+        "paper_url": "https://wg21.link/p1306",
+        "closed_at": "2025-06-21T06:47:54Z",
         "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P3394",
-        "title": "Annotations for Reflection",
-        "url": "https://github.com/cplusplus/papers/issues/2074",
-        "paper_url": "https://wg21.link/p3394",
-        "closed_at": "2025-07-14T20:27:38Z",
-        "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3293",
         "title": "Splicing a base class subobject",
         "url": "https://github.com/cplusplus/papers/issues/1945",
         "paper_url": "https://wg21.link/p3293",
-        "closed_at": "2025-07-14T20:53:00Z",
+        "closed_at": "2025-06-21T06:47:55Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3394",
+        "title": "Annotations for Reflection",
+        "url": "https://github.com/cplusplus/papers/issues/2074",
+        "paper_url": "https://wg21.link/p3394",
+        "closed_at": "2025-06-21T06:47:56Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3491",
         "title": "define_static_{string,object,array}",
         "url": "https://github.com/cplusplus/papers/issues/2158",
         "paper_url": "https://wg21.link/p3491",
-        "closed_at": "2025-07-14T21:19:58Z",
+        "closed_at": "2025-06-21T06:47:56Z",
         "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P1306",
-        "title": "Expansion statements",
-        "url": "https://github.com/cplusplus/papers/issues/156",
-        "paper_url": "https://wg21.link/p1306",
-        "closed_at": "2025-07-14T21:38:09Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P3096",
-        "title": "Function Parameter Reflection in Reflection for C++26",
-        "url": "https://github.com/cplusplus/papers/issues/1764",
-        "paper_url": "https://wg21.link/p3096",
-        "closed_at": "2025-07-14T22:15:38Z",
-        "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3533",
         "title": "constexpr virtual inheritance",
         "url": "https://github.com/cplusplus/papers/issues/2174",
         "paper_url": "https://wg21.link/p3533",
-        "closed_at": "2025-07-14T22:17:27Z",
+        "closed_at": "2025-06-21T06:47:56Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3618",
+        "title": "Allow attaching main to the global module",
+        "url": "https://github.com/cplusplus/papers/issues/2237",
+        "paper_url": "https://wg21.link/p3618",
+        "closed_at": "2025-06-21T06:47:57Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2988",
         "title": "std::optional<T&>",
         "url": "https://github.com/cplusplus/papers/issues/1661",
         "paper_url": "https://wg21.link/p2988",
-        "closed_at": "2025-07-15T08:02:10Z",
+        "closed_at": "2025-06-21T07:06:11Z",
         "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3348",
-        "title": "C++26 should refer to C23 not C17",
-        "url": "https://github.com/cplusplus/papers/issues/2020",
-        "paper_url": "https://wg21.link/p3348",
-        "closed_at": "2025-07-15T08:24:02Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3037",
-        "title": "constexpr std::shared_ptr and friends",
-        "url": "https://github.com/cplusplus/papers/issues/1713",
-        "paper_url": "https://wg21.link/p3037",
-        "closed_at": "2025-07-15T11:12:10Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3284",
-        "title": "`write_env` and `unstoppable` Sender Adaptors",
-        "url": "https://github.com/cplusplus/papers/issues/1938",
-        "paper_url": "https://wg21.link/p3284",
-        "closed_at": "2025-07-15T11:17:26Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3179",
-        "title": "C++ parallel range algorithms",
-        "url": "https://github.com/cplusplus/papers/issues/1815",
-        "paper_url": "https://wg21.link/p3179",
-        "closed_at": "2025-07-15T17:23:21Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3709",
-        "title": "Reconsider parallel ranges::rotate_copy and ranges::reverse_copy",
-        "url": "https://github.com/cplusplus/papers/issues/2337",
-        "paper_url": "https://wg21.link/p3709",
-        "closed_at": "2025-07-15T17:55:28Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
-      },
-      {
-        "number": "P3641",
-        "title": "Rename std::observable to std::observable_checkpoint, and add a feature-test macro",
-        "url": "https://github.com/cplusplus/papers/issues/2278",
-        "paper_url": "https://wg21.link/p3641",
-        "closed_at": "2025-07-15T18:01:41Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3044",
-        "title": "sub-string_view from string",
-        "url": "https://github.com/cplusplus/papers/issues/1737",
-        "paper_url": "https://wg21.link/p3044",
-        "closed_at": "2025-07-15T18:03:20Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2664",
-        "title": "Proposal to extend std::simd with permutation API",
-        "url": "https://github.com/cplusplus/papers/issues/1383",
-        "paper_url": "https://wg21.link/p2664",
-        "closed_at": "2025-07-15T21:26:29Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2876",
-        "title": "Proposal to extend std::simd with more constructors and accessors",
-        "url": "https://github.com/cplusplus/papers/issues/1531",
-        "paper_url": "https://wg21.link/p2876",
-        "closed_at": "2025-07-15T21:49:05Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3480",
-        "title": "std::simd is a range",
-        "url": "https://github.com/cplusplus/papers/issues/2134",
-        "paper_url": "https://wg21.link/p3480",
-        "closed_at": "2025-07-15T21:49:06Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3691",
-        "title": "Reconsider naming of the namespace for 'std::simd'",
-        "url": "https://github.com/cplusplus/papers/issues/2321",
-        "paper_url": "https://wg21.link/p3691",
-        "closed_at": "2025-07-15T21:49:06Z",
-        "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3383",
         "title": "mdspan.at()",
         "url": "https://github.com/cplusplus/papers/issues/2040",
         "paper_url": "https://wg21.link/p3383",
-        "closed_at": "2025-07-15T22:03:30Z",
+        "closed_at": "2025-06-21T07:07:48Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
-        "number": "P2927",
-        "title": "Observing exceptions stored in exception_ptr",
-        "url": "https://github.com/cplusplus/papers/issues/1649",
-        "paper_url": "https://wg21.link/p2927",
-        "closed_at": "2025-07-15T22:37:12Z",
+        "number": "P3480",
+        "title": "std::simd is a range",
+        "url": "https://github.com/cplusplus/papers/issues/2134",
+        "paper_url": "https://wg21.link/p3480",
+        "closed_at": "2025-06-21T07:07:48Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
-        "number": "P2830",
-        "title": "Standardized Constexpr Type Ordering",
-        "url": "https://github.com/cplusplus/papers/issues/1507",
-        "paper_url": "https://wg21.link/p2830",
-        "closed_at": "2025-07-15T23:12:02Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P3570",
-        "title": "optional variants in sender/receiver",
-        "url": "https://github.com/cplusplus/papers/issues/2249",
-        "paper_url": "https://wg21.link/p3570",
-        "closed_at": "2025-07-15T23:27:59Z",
+        "number": "P3691",
+        "title": "Reconsider naming of the namespace for 'std::simd'",
+        "url": "https://github.com/cplusplus/papers/issues/2321",
+        "paper_url": "https://wg21.link/p3691",
+        "closed_at": "2025-06-21T07:07:49Z",
         "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3433",
-        "title": "Allocator Support for Operation States",
-        "url": "https://github.com/cplusplus/papers/issues/2098",
-        "paper_url": "https://wg21.link/p3433",
-        "closed_at": "2025-07-16T00:10:10Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3149",
-        "title": "async_scope -- Creating scopes for non-sequential concurrency",
-        "url": "https://github.com/cplusplus/papers/issues/1800",
-        "paper_url": "https://wg21.link/p3149",
-        "closed_at": "2025-07-16T12:30:33Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3682",
-        "title": "Remove std::execution::split",
-        "url": "https://github.com/cplusplus/papers/issues/2314",
-        "paper_url": "https://wg21.link/p3682",
-        "closed_at": "2025-07-16T12:31:31Z",
-        "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2079",
         "title": "Parallel Scheduler",
         "url": "https://github.com/cplusplus/papers/issues/806",
         "paper_url": "https://wg21.link/p2079",
-        "closed_at": "2025-07-16T13:30:56Z",
+        "closed_at": "2025-06-21T07:10:57Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
-        "number": "P3008",
-        "title": "Atomic floating-point min/max",
-        "url": "https://github.com/cplusplus/papers/issues/1672",
-        "paper_url": "https://wg21.link/p3008",
-        "closed_at": "2025-07-16T17:58:58Z",
+        "number": "P3149",
+        "title": "async_scope -- Creating scopes for non-sequential concurrency",
+        "url": "https://github.com/cplusplus/papers/issues/1800",
+        "paper_url": "https://wg21.link/p3149",
+        "closed_at": "2025-06-21T07:10:58Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3284",
+        "title": "`write_env` and `unstoppable` Sender Adaptors",
+        "url": "https://github.com/cplusplus/papers/issues/1938",
+        "paper_url": "https://wg21.link/p3284",
+        "closed_at": "2025-06-21T07:10:58Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3433",
+        "title": "Allocator Support for Operation States",
+        "url": "https://github.com/cplusplus/papers/issues/2098",
+        "paper_url": "https://wg21.link/p3433",
+        "closed_at": "2025-06-21T07:10:58Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3481",
+        "title": "std::execution::bulk() issues",
+        "url": "https://github.com/cplusplus/papers/issues/2135",
+        "paper_url": "https://wg21.link/p3481",
+        "closed_at": "2025-06-21T07:10:59Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3570",
+        "title": "optional variants in sender/receiver",
+        "url": "https://github.com/cplusplus/papers/issues/2249",
+        "paper_url": "https://wg21.link/p3570",
+        "closed_at": "2025-06-21T07:10:59Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3682",
+        "title": "Remove std::execution::split",
+        "url": "https://github.com/cplusplus/papers/issues/2314",
+        "paper_url": "https://wg21.link/p3682",
+        "closed_at": "2025-06-21T07:10:59Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3557",
+        "title": "High-Quality Sender Diagnostics with Constexpr Exceptions",
+        "url": "https://github.com/cplusplus/papers/issues/2203",
+        "paper_url": "https://wg21.link/p3557",
+        "closed_at": "2025-06-21T07:11:54Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3348",
+        "title": "C++26 should refer to C23 not C17",
+        "url": "https://github.com/cplusplus/papers/issues/2020",
+        "paper_url": "https://wg21.link/p3348",
+        "closed_at": "2025-06-21T07:17:12Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3037",
+        "title": "constexpr std::shared_ptr and friends",
+        "url": "https://github.com/cplusplus/papers/issues/1713",
+        "paper_url": "https://wg21.link/p3037",
+        "closed_at": "2025-06-21T07:18:05Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3179",
+        "title": "C++ parallel range algorithms",
+        "url": "https://github.com/cplusplus/papers/issues/1815",
+        "paper_url": "https://wg21.link/p3179",
+        "closed_at": "2025-06-21T07:18:05Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3709",
+        "title": "Reconsider parallel ranges::rotate_copy and ranges::reverse_copy",
+        "url": "https://github.com/cplusplus/papers/issues/2337",
+        "paper_url": "https://wg21.link/p3709",
+        "closed_at": "2025-06-21T07:19:08Z",
         "category": "Other / Uncategorized",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3641",
+        "title": "Rename std::observable to std::observable_checkpoint, and add a feature-test macro",
+        "url": "https://github.com/cplusplus/papers/issues/2278",
+        "paper_url": "https://wg21.link/p3641",
+        "closed_at": "2025-06-21T07:19:40Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3044",
+        "title": "sub-string_view from string",
+        "url": "https://github.com/cplusplus/papers/issues/1737",
+        "paper_url": "https://wg21.link/p3044",
+        "closed_at": "2025-06-21T07:20:05Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2876",
+        "title": "Proposal to extend std::simd with more constructors and accessors",
+        "url": "https://github.com/cplusplus/papers/issues/1531",
+        "paper_url": "https://wg21.link/p2876",
+        "closed_at": "2025-06-21T07:20:47Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2664",
+        "title": "Proposal to extend std::simd with permutation API",
+        "url": "https://github.com/cplusplus/papers/issues/1383",
+        "paper_url": "https://wg21.link/p2664",
+        "closed_at": "2025-06-21T07:40:26Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2927",
+        "title": "Observing exceptions stored in exception_ptr",
+        "url": "https://github.com/cplusplus/papers/issues/1649",
+        "paper_url": "https://wg21.link/p2927",
+        "closed_at": "2025-06-21T07:41:49Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2830",
+        "title": "Standardized Constexpr Type Ordering",
+        "url": "https://github.com/cplusplus/papers/issues/1507",
+        "paper_url": "https://wg21.link/p2830",
+        "closed_at": "2025-06-21T07:42:13Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3503",
+        "title": "Make type-erased allocator use in promise and packaged_task consistent",
+        "url": "https://github.com/cplusplus/papers/issues/2164",
+        "paper_url": "https://wg21.link/p3503",
+        "closed_at": "2025-06-21T07:45:06Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3111",
         "title": "Atomic Reduction Operations",
         "url": "https://github.com/cplusplus/papers/issues/1902",
         "paper_url": "https://wg21.link/p3111",
-        "closed_at": "2025-07-16T18:46:59Z",
+        "closed_at": "2025-06-21T07:46:13Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
-        "number": "P2319",
-        "title": "Prevent path presentation problems",
-        "url": "https://github.com/cplusplus/papers/issues/1987",
-        "paper_url": "https://wg21.link/p2319",
-        "closed_at": "2025-07-16T19:45:47Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2781",
-        "title": "std::constexpr_wrapper",
-        "url": "https://github.com/cplusplus/papers/issues/1458",
-        "paper_url": "https://wg21.link/p2781",
-        "closed_at": "2025-07-16T23:49:01Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3552",
-        "title": "Add a Coroutine Task Type",
-        "url": "https://github.com/cplusplus/papers/issues/2200",
-        "paper_url": "https://wg21.link/p3552",
-        "closed_at": "2025-07-17T12:13:24Z",
-        "category": "Standard Library",
-        "target": "C++29"
+        "number": "P3008",
+        "title": "Atomic floating-point min/max",
+        "url": "https://github.com/cplusplus/papers/issues/1672",
+        "paper_url": "https://wg21.link/p3008",
+        "closed_at": "2025-06-21T07:46:48Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3060",
         "title": "Add std::views::indices(n)",
         "url": "https://github.com/cplusplus/papers/issues/1727",
         "paper_url": "https://wg21.link/p3060",
-        "closed_at": "2025-07-18T12:21:44Z",
+        "closed_at": "2025-06-21T07:47:09Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2319",
+        "title": "Prevent path presentation problems",
+        "url": "https://github.com/cplusplus/papers/issues/1987",
+        "paper_url": "https://wg21.link/p2319",
+        "closed_at": "2025-06-21T07:47:26Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3223",
+        "title": "Making std::istream::ignore less surprising",
+        "url": "https://github.com/cplusplus/papers/issues/1871",
+        "paper_url": "https://wg21.link/p3223",
+        "closed_at": "2025-06-21T07:47:47Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2781",
+        "title": "std::constexpr_wrapper",
+        "url": "https://github.com/cplusplus/papers/issues/1458",
+        "paper_url": "https://wg21.link/p2781",
+        "closed_at": "2025-06-21T07:48:50Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3697",
+        "title": "Minor additions to C++26 standard library hardening",
+        "url": "https://github.com/cplusplus/papers/issues/2327",
+        "paper_url": "https://wg21.link/p3697",
+        "closed_at": "2025-06-21T07:50:11Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3096",
+        "title": "Function Parameter Reflection in Reflection for C++26",
+        "url": "https://github.com/cplusplus/papers/issues/1764",
+        "paper_url": "https://wg21.link/p3096",
+        "closed_at": "2025-06-21T07:52:17Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3552",
+        "title": "Add a Coroutine Task Type",
+        "url": "https://github.com/cplusplus/papers/issues/2200",
+        "paper_url": "https://wg21.link/p3552",
+        "closed_at": "2025-06-21T08:14:48Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P1317",
+        "title": "Remove return type deduction in std::apply",
+        "url": "https://github.com/cplusplus/papers/issues/326",
+        "paper_url": "https://wg21.link/p1317",
+        "closed_at": "2025-06-21T08:15:57Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2996",
@@ -432,61 +538,8 @@
         "paper_url": "https://wg21.link/p2996",
         "closed_at": "2025-07-25T16:42:39Z",
         "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P1317",
-        "title": "Remove return type deduction in std::apply",
-        "url": "https://github.com/cplusplus/papers/issues/326",
-        "paper_url": "https://wg21.link/p1317",
-        "closed_at": "2025-07-25T16:45:59Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3223",
-        "title": "Making std::istream::ignore less surprising",
-        "url": "https://github.com/cplusplus/papers/issues/1871",
-        "paper_url": "https://wg21.link/p3223",
-        "closed_at": "2025-07-25T16:47:48Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3481",
-        "title": "std::execution::bulk() issues",
-        "url": "https://github.com/cplusplus/papers/issues/2135",
-        "paper_url": "https://wg21.link/p3481",
-        "closed_at": "2025-07-25T16:49:01Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3503",
-        "title": "Make type-erased allocator use in promise and packaged_task consistent",
-        "url": "https://github.com/cplusplus/papers/issues/2164",
-        "paper_url": "https://wg21.link/p3503",
-        "closed_at": "2025-07-25T16:50:03Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3557",
-        "title": "High-Quality Sender Diagnostics with Constexpr Exceptions",
-        "url": "https://github.com/cplusplus/papers/issues/2203",
-        "paper_url": "https://wg21.link/p3557",
-        "closed_at": "2025-07-25T16:52:40Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3697",
-        "title": "Minor additions to C++26 standard library hardening",
-        "url": "https://github.com/cplusplus/papers/issues/2327",
-        "paper_url": "https://wg21.link/p3697",
-        "closed_at": "2025-07-25T16:53:37Z",
-        "category": "Standard Library",
-        "target": "C++29"
+        "target": "C++26",
+        "state": "closed"
       }
     ]
   },
@@ -499,18 +552,193 @@
         "title": "Abolish the term \"converting constructor\"",
         "url": "https://github.com/cplusplus/papers/issues/2179",
         "paper_url": "https://wg21.link/p3542",
-        "closed_at": "2025-02-24T13:27:12Z",
+        "closed_at": "2025-02-15T08:40:51Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P1967",
+        "title": "#embed - a simple, scannable preprocessor-based resource acquisition method",
+        "url": "https://github.com/cplusplus/papers/issues/700",
+        "paper_url": "https://wg21.link/p1967",
+        "closed_at": "2025-02-15T08:51:55Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2786",
+        "title": "Trivial Relocatability For C++26",
+        "url": "https://github.com/cplusplus/papers/issues/1463",
+        "paper_url": "https://wg21.link/p2786",
+        "closed_at": "2025-02-15T08:51:56Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed",
+        "status": "reverted",
+        "reverted_by": "P3920",
+        "note": "NB comment resolution (Kona 2025)"
+      },
+      {
+        "number": "P2841",
+        "title": "Concept and variable-template template-parameters",
+        "url": "https://github.com/cplusplus/papers/issues/1546",
+        "paper_url": "https://wg21.link/p2841",
+        "closed_at": "2025-02-15T08:51:56Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2900",
+        "title": "Contracts for C++",
+        "url": "https://github.com/cplusplus/papers/issues/1648",
+        "paper_url": "https://wg21.link/p2900",
+        "closed_at": "2025-02-15T08:51:57Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3074",
         "title": "trivial unions (was std::uninitialized<T>)",
         "url": "https://github.com/cplusplus/papers/issues/1734",
         "paper_url": "https://wg21.link/p3074",
-        "closed_at": "2025-02-24T13:41:31Z",
+        "closed_at": "2025-02-15T08:51:57Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3475",
+        "title": "Defang and deprecate memory_order::consume",
+        "url": "https://github.com/cplusplus/papers/issues/2129",
+        "paper_url": "https://wg21.link/p3475",
+        "closed_at": "2025-02-15T08:51:58Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3137",
+        "title": "views::to_input",
+        "url": "https://github.com/cplusplus/papers/issues/1791",
+        "paper_url": "https://wg21.link/p3137",
+        "closed_at": "2025-02-15T09:02:10Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P0472",
+        "title": "Put std::monostate in <utility>",
+        "url": "https://github.com/cplusplus/papers/issues/1993",
+        "paper_url": "https://wg21.link/p0472",
+        "closed_at": "2025-02-15T09:03:53Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3349",
+        "title": "Converting contiguous iterators to pointers",
+        "url": "https://github.com/cplusplus/papers/issues/2067",
+        "paper_url": "https://wg21.link/p3349",
+        "closed_at": "2025-02-15T09:04:17Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3441",
+        "title": "Rename simd_split to simd_chunk",
+        "url": "https://github.com/cplusplus/papers/issues/2105",
+        "paper_url": "https://wg21.link/p3441",
+        "closed_at": "2025-02-15T09:05:40Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3287",
+        "title": "Exploration of namespaces for std::simd",
+        "url": "https://github.com/cplusplus/papers/issues/1940",
+        "paper_url": "https://wg21.link/p3287",
+        "closed_at": "2025-02-15T09:06:10Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2976",
+        "title": "Freestanding Library: algorithm, numeric, and random",
+        "url": "https://github.com/cplusplus/papers/issues/1644",
+        "paper_url": "https://wg21.link/p2976",
+        "closed_at": "2025-02-15T09:06:41Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3430",
+        "title": "simd issues: explicit, unsequenced, identity-element position, and members of disabled simd",
+        "url": "https://github.com/cplusplus/papers/issues/2097",
+        "paper_url": "https://wg21.link/p3430",
+        "closed_at": "2025-02-15T09:07:12Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2663",
+        "title": "Proposal to support interleaved complex values in std::simd",
+        "url": "https://github.com/cplusplus/papers/issues/1330",
+        "paper_url": "https://wg21.link/p2663",
+        "closed_at": "2025-02-15T09:07:37Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2933",
+        "title": "std::simd overloads for <bit> header",
+        "url": "https://github.com/cplusplus/papers/issues/1622",
+        "paper_url": "https://wg21.link/p2933",
+        "closed_at": "2025-02-15T09:08:01Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2846",
+        "title": "reserve_hint: Eagerly reserving memory for not-quite-sized lazy ranges",
+        "url": "https://github.com/cplusplus/papers/issues/1549",
+        "paper_url": "https://wg21.link/p2846",
+        "closed_at": "2025-02-15T09:09:36Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3471",
+        "title": "Standard Library Hardening",
+        "url": "https://github.com/cplusplus/papers/issues/2125",
+        "paper_url": "https://wg21.link/p3471",
+        "closed_at": "2025-02-15T09:11:05Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3019",
+        "title": "Vocabulary Types for Composite Class Design",
+        "url": "https://github.com/cplusplus/papers/issues/1680",
+        "paper_url": "https://wg21.link/p3019",
+        "closed_at": "2025-02-15T09:17:49Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P1494",
@@ -519,145 +747,8 @@
         "paper_url": "https://wg21.link/p1494",
         "closed_at": "2025-02-24T14:58:51Z",
         "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P2900",
-        "title": "Contracts for C++",
-        "url": "https://github.com/cplusplus/papers/issues/1648",
-        "paper_url": "https://wg21.link/p2900",
-        "closed_at": "2025-03-14T17:12:39Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P3475",
-        "title": "Defang and deprecate memory_order::consume",
-        "url": "https://github.com/cplusplus/papers/issues/2129",
-        "paper_url": "https://wg21.link/p3475",
-        "closed_at": "2025-03-14T17:16:22Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P2841",
-        "title": "Concept and variable-template template-parameters",
-        "url": "https://github.com/cplusplus/papers/issues/1546",
-        "paper_url": "https://wg21.link/p2841",
-        "closed_at": "2025-03-15T00:55:35Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P2786",
-        "title": "Trivial Relocatability For C++26",
-        "url": "https://github.com/cplusplus/papers/issues/1463",
-        "paper_url": "https://wg21.link/p2786",
-        "closed_at": "2025-03-15T10:34:52Z",
-        "category": "Core Language",
         "target": "C++26",
-        "status": "reverted",
-        "reverted_by": "P3920",
-        "note": "NB comment resolution (Kona 2025)"
-      },
-      {
-        "number": "P1967",
-        "title": "#embed - a simple, scannable preprocessor-based resource acquisition method",
-        "url": "https://github.com/cplusplus/papers/issues/700",
-        "paper_url": "https://wg21.link/p1967",
-        "closed_at": "2025-03-15T11:17:15Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P3137",
-        "title": "views::to_input",
-        "url": "https://github.com/cplusplus/papers/issues/1791",
-        "paper_url": "https://wg21.link/p3137",
-        "closed_at": "2025-03-15T12:09:33Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P0472",
-        "title": "Put std::monostate in <utility>",
-        "url": "https://github.com/cplusplus/papers/issues/1993",
-        "paper_url": "https://wg21.link/p0472",
-        "closed_at": "2025-03-15T12:14:19Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3349",
-        "title": "Converting contiguous iterators to pointers",
-        "url": "https://github.com/cplusplus/papers/issues/2067",
-        "paper_url": "https://wg21.link/p3349",
-        "closed_at": "2025-03-15T12:17:06Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3441",
-        "title": "Rename simd_split to simd_chunk",
-        "url": "https://github.com/cplusplus/papers/issues/2105",
-        "paper_url": "https://wg21.link/p3441",
-        "closed_at": "2025-03-15T13:27:39Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2933",
-        "title": "std::simd overloads for <bit> header",
-        "url": "https://github.com/cplusplus/papers/issues/1622",
-        "paper_url": "https://wg21.link/p2933",
-        "closed_at": "2025-03-15T14:07:24Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2663",
-        "title": "Proposal to support interleaved complex values in std::simd",
-        "url": "https://github.com/cplusplus/papers/issues/1330",
-        "paper_url": "https://wg21.link/p2663",
-        "closed_at": "2025-03-15T14:19:34Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3287",
-        "title": "Exploration of namespaces for std::simd",
-        "url": "https://github.com/cplusplus/papers/issues/1940",
-        "paper_url": "https://wg21.link/p3287",
-        "closed_at": "2025-03-15T14:23:05Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2976",
-        "title": "Freestanding Library: algorithm, numeric, and random",
-        "url": "https://github.com/cplusplus/papers/issues/1644",
-        "paper_url": "https://wg21.link/p2976",
-        "closed_at": "2025-03-15T14:25:08Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3430",
-        "title": "simd issues: explicit, unsequenced, identity-element position, and members of disabled simd",
-        "url": "https://github.com/cplusplus/papers/issues/2097",
-        "paper_url": "https://wg21.link/p3430",
-        "closed_at": "2025-03-15T14:49:38Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3471",
-        "title": "Standard Library Hardening",
-        "url": "https://github.com/cplusplus/papers/issues/2125",
-        "paper_url": "https://wg21.link/p3471",
-        "closed_at": "2025-03-15T16:36:38Z",
-        "category": "Core Language",
-        "target": "C++26"
+        "state": "closed"
       },
       {
         "number": "P0447",
@@ -666,25 +757,8 @@
         "paper_url": "https://wg21.link/p0447",
         "closed_at": "2025-03-15T17:18:03Z",
         "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2846",
-        "title": "reserve_hint: Eagerly reserving memory for not-quite-sized lazy ranges",
-        "url": "https://github.com/cplusplus/papers/issues/1549",
-        "paper_url": "https://wg21.link/p2846",
-        "closed_at": "2025-04-19T17:28:31Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3019",
-        "title": "Vocabulary Types for Composite Class Design",
-        "url": "https://github.com/cplusplus/papers/issues/1680",
-        "paper_url": "https://wg21.link/p3019",
-        "closed_at": "2025-04-19T17:29:59Z",
-        "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       }
     ]
   },
@@ -693,229 +767,244 @@
     "meeting_date": "2024-11",
     "papers": [
       {
-        "number": "P3107",
-        "title": "Permit an efficient implementation of std::print",
-        "url": "https://github.com/cplusplus/papers/issues/1771",
-        "paper_url": "https://wg21.link/p3107",
-        "closed_at": "2024-11-23T09:03:13Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
         "number": "P3340",
         "title": "A Consistent Grammar for Sequences",
         "url": "https://github.com/cplusplus/papers/issues/2003",
         "paper_url": "https://wg21.link/p3340",
-        "closed_at": "2024-12-16T00:54:38Z",
+        "closed_at": "2024-11-23T09:00:16Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2686",
         "title": "constexpr structured bindings and references to constexpr variables",
         "url": "https://github.com/cplusplus/papers/issues/1351",
         "paper_url": "https://wg21.link/p2686",
-        "closed_at": "2024-12-16T01:24:51Z",
+        "closed_at": "2024-11-23T09:00:35Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3068",
         "title": "Allowing exception throwing in constant-evaluation",
         "url": "https://github.com/cplusplus/papers/issues/1754",
         "paper_url": "https://wg21.link/p3068",
-        "closed_at": "2024-12-16T01:39:35Z",
+        "closed_at": "2024-11-23T09:00:59Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3247",
         "title": "Deprecate the notion of trivial types",
         "url": "https://github.com/cplusplus/papers/issues/1889",
         "paper_url": "https://wg21.link/p3247",
-        "closed_at": "2024-12-16T01:47:50Z",
+        "closed_at": "2024-11-23T09:01:33Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2865",
         "title": "Remove Deprecated Array Comparisons from C++26",
         "url": "https://github.com/cplusplus/papers/issues/1555",
         "paper_url": "https://wg21.link/p2865",
-        "closed_at": "2024-12-16T01:53:58Z",
+        "closed_at": "2024-11-23T09:02:24Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P1061",
         "title": "Structured Bindings can introduce a Pack",
         "url": "https://github.com/cplusplus/papers/issues/294",
         "paper_url": "https://wg21.link/p1061",
-        "closed_at": "2024-12-16T02:10:09Z",
+        "closed_at": "2024-11-23T09:04:34Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3176",
         "title": "The Oxford variadic comma",
         "url": "https://github.com/cplusplus/papers/issues/1839",
         "paper_url": "https://wg21.link/p3176",
-        "closed_at": "2024-12-16T02:22:51Z",
+        "closed_at": "2024-11-23T09:04:57Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3136",
         "title": "Retiring niebloids",
         "url": "https://github.com/cplusplus/papers/issues/1790",
         "paper_url": "https://wg21.link/p3136",
-        "closed_at": "2024-12-16T17:37:11Z",
+        "closed_at": "2024-11-23T09:09:55Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3138",
         "title": "views::cache_latest",
         "url": "https://github.com/cplusplus/papers/issues/1792",
         "paper_url": "https://wg21.link/p3138",
-        "closed_at": "2024-12-16T20:18:12Z",
+        "closed_at": "2024-11-23T09:10:58Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3379",
         "title": "Constrain std::expected equality operators",
         "url": "https://github.com/cplusplus/papers/issues/2036",
         "paper_url": "https://wg21.link/p3379",
-        "closed_at": "2024-12-16T20:19:29Z",
+        "closed_at": "2024-11-23T09:11:29Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2862",
         "title": "text_encoding::name() should never return null values",
         "url": "https://github.com/cplusplus/papers/issues/1521",
         "paper_url": "https://wg21.link/p2862",
-        "closed_at": "2024-12-16T20:21:58Z",
+        "closed_at": "2024-11-23T09:11:45Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2897",
         "title": "aligned_accessor: An mdspan accessor expressing pointer overalignment",
         "url": "https://github.com/cplusplus/papers/issues/1568",
         "paper_url": "https://wg21.link/p2897",
-        "closed_at": "2024-12-16T21:05:42Z",
+        "closed_at": "2024-11-23T09:12:06Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3355",
         "title": "Fix submdspan for C++26",
         "url": "https://github.com/cplusplus/papers/issues/2011",
         "paper_url": "https://wg21.link/p3355",
-        "closed_at": "2024-12-17T12:28:48Z",
+        "closed_at": "2024-11-23T09:12:38Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3222",
         "title": "Fix C++26 by adding transposed special cases for P2642 layouts",
         "url": "https://github.com/cplusplus/papers/issues/1870",
         "paper_url": "https://wg21.link/p3222",
-        "closed_at": "2024-12-17T12:30:25Z",
+        "closed_at": "2024-11-23T09:13:20Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3050",
         "title": "Fix C++26 by optimizing linalg::conjugated for noncomplex value types",
         "url": "https://github.com/cplusplus/papers/issues/1719",
         "paper_url": "https://wg21.link/p3050",
-        "closed_at": "2024-12-17T13:02:39Z",
+        "closed_at": "2024-11-23T09:14:11Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3396",
         "title": "std::execution wording fixes",
         "url": "https://github.com/cplusplus/papers/issues/2048",
         "paper_url": "https://wg21.link/p3396",
-        "closed_at": "2024-12-17T13:04:12Z",
+        "closed_at": "2024-11-23T09:14:55Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2835",
         "title": "Expose std::atomic_ref's object address",
         "url": "https://github.com/cplusplus/papers/issues/1545",
         "paper_url": "https://wg21.link/p2835",
-        "closed_at": "2024-12-17T13:05:17Z",
+        "closed_at": "2024-11-23T09:17:14Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3323",
         "title": "cv-qualified types in atomic and atomic_ref",
         "url": "https://github.com/cplusplus/papers/issues/1985",
         "paper_url": "https://wg21.link/p3323",
-        "closed_at": "2024-12-17T13:09:13Z",
+        "closed_at": "2024-11-23T09:17:41Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3369",
         "title": "constexpr for uninitialized_default_construct",
         "url": "https://github.com/cplusplus/papers/issues/2026",
         "paper_url": "https://wg21.link/p3369",
-        "closed_at": "2024-12-17T13:12:32Z",
+        "closed_at": "2024-11-23T09:18:23Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3508",
         "title": "Wording for constexpr for specialized memory algorithms",
         "url": "https://github.com/cplusplus/papers/issues/2141",
         "paper_url": "https://wg21.link/p3508",
-        "closed_at": "2024-12-17T13:12:33Z",
+        "closed_at": "2024-11-23T09:18:23Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3370",
         "title": "Add new library headers from C23",
         "url": "https://github.com/cplusplus/papers/issues/2027",
         "paper_url": "https://wg21.link/p3370",
-        "closed_at": "2024-12-17T14:07:28Z",
+        "closed_at": "2024-11-23T09:18:42Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3309",
         "title": "constexpr atomic and atomic_ref",
         "url": "https://github.com/cplusplus/papers/issues/1960",
         "paper_url": "https://wg21.link/p3309",
-        "closed_at": "2024-12-17T14:41:05Z",
+        "closed_at": "2024-11-23T09:19:09Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P1928",
         "title": "std::simd - Merge data-parallel types from the Parallelism TS 2",
         "url": "https://github.com/cplusplus/papers/issues/670",
         "paper_url": "https://wg21.link/p1928",
-        "closed_at": "2024-12-17T17:19:46Z",
+        "closed_at": "2024-11-23T09:23:05Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3325",
         "title": "A Utility for Creating Execution Environments",
         "url": "https://github.com/cplusplus/papers/issues/1986",
         "paper_url": "https://wg21.link/p3325",
-        "closed_at": "2024-12-17T17:21:10Z",
+        "closed_at": "2024-11-23T09:23:39Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       }
     ]
   },
@@ -924,157 +1013,174 @@
     "meeting_date": "2024-06",
     "papers": [
       {
-        "number": "P3175",
-        "title": "Reconsidering the `std::execution::on` algorithm",
-        "url": "https://github.com/cplusplus/papers/issues/1838",
-        "paper_url": "https://wg21.link/p3175",
-        "closed_at": "2024-07-04T16:00:40Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
-      },
-      {
-        "number": "P3303",
-        "title": "Fixing Lazy Sender Algorithm Customization",
-        "url": "https://github.com/cplusplus/papers/issues/1954",
-        "paper_url": "https://wg21.link/p3303",
-        "closed_at": "2024-07-04T16:01:06Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
-      },
-      {
-        "number": "P2747",
-        "title": "constexpr placement new",
-        "url": "https://github.com/cplusplus/papers/issues/1438",
-        "paper_url": "https://wg21.link/p2747",
-        "closed_at": "2024-07-12T13:20:22Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P3144",
-        "title": "Deleting a Pointer to an Incomplete Type Should be Ill-formed",
-        "url": "https://github.com/cplusplus/papers/issues/1796",
-        "paper_url": "https://wg21.link/p3144",
-        "closed_at": "2024-07-12T13:29:27Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P2963",
-        "title": "Ordering of constraints involving fold expressions",
-        "url": "https://github.com/cplusplus/papers/issues/1638",
-        "paper_url": "https://wg21.link/p2963",
-        "closed_at": "2024-07-12T13:49:58Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
         "number": "P0963",
         "title": "Structured binding declaration as a condition",
         "url": "https://github.com/cplusplus/papers/issues/1617",
         "paper_url": "https://wg21.link/p0963",
-        "closed_at": "2024-07-12T14:04:29Z",
+        "closed_at": "2024-07-03T02:55:53Z",
         "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P2997",
-        "title": "Removing the common reference requirement from the indirectly invocable concepts",
-        "url": "https://github.com/cplusplus/papers/issues/1669",
-        "paper_url": "https://wg21.link/p2997",
-        "closed_at": "2024-07-12T15:39:25Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2389",
-        "title": "`dextents` Index Type Parameter",
-        "url": "https://github.com/cplusplus/papers/issues/1743",
-        "paper_url": "https://wg21.link/p2389",
-        "closed_at": "2024-07-12T16:01:07Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3168",
-        "title": "Give std::optional Range Support",
-        "url": "https://github.com/cplusplus/papers/issues/1831",
-        "paper_url": "https://wg21.link/p3168",
-        "closed_at": "2024-07-12T16:08:07Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3217",
-        "title": "Adjoints to \"Enabling list-initialization for algorithms\": find_last",
-        "url": "https://github.com/cplusplus/papers/issues/1866",
-        "paper_url": "https://wg21.link/p3217",
-        "closed_at": "2024-07-12T16:10:38Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2985",
-        "title": "A type trait for detecting virtual base classes",
-        "url": "https://github.com/cplusplus/papers/issues/1659",
-        "paper_url": "https://wg21.link/p2985",
-        "closed_at": "2024-07-12T16:29:16Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P0843",
-        "title": "inplace_vector",
-        "url": "https://github.com/cplusplus/papers/issues/114",
-        "paper_url": "https://wg21.link/p0843",
-        "closed_at": "2024-07-16T08:56:56Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2968",
-        "title": "Make std::ignore a first-class object",
-        "url": "https://github.com/cplusplus/papers/issues/1640",
-        "paper_url": "https://wg21.link/p2968",
-        "closed_at": "2024-07-16T09:07:13Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3341",
-        "title": "C++ Standard Library Ready Issues to be moved in St Louis, Jun. 2024",
-        "url": "https://github.com/cplusplus/papers/issues/2004",
-        "paper_url": "https://wg21.link/p3341",
-        "closed_at": "2024-07-17T09:19:08Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P3187",
-        "title": "remove ensure_started and start_detached from P2300",
-        "url": "https://github.com/cplusplus/papers/issues/1853",
-        "paper_url": "https://wg21.link/p3187",
-        "closed_at": "2024-07-19T10:49:35Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
-      },
-      {
-        "number": "P2075",
-        "title": "Philox as an extension of the C++ RNG engines",
-        "url": "https://github.com/cplusplus/papers/issues/802",
-        "paper_url": "https://wg21.link/p2075",
-        "closed_at": "2024-07-22T13:24:25Z",
-        "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2300",
         "title": "`std::execution`",
         "url": "https://github.com/cplusplus/papers/issues/1054",
         "paper_url": "https://wg21.link/p2300",
-        "closed_at": "2024-07-26T23:05:53Z",
+        "closed_at": "2024-07-04T15:33:20Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2997",
+        "title": "Removing the common reference requirement from the indirectly invocable concepts",
+        "url": "https://github.com/cplusplus/papers/issues/1669",
+        "paper_url": "https://wg21.link/p2997",
+        "closed_at": "2024-07-04T15:44:15Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2389",
+        "title": "`dextents` Index Type Parameter",
+        "url": "https://github.com/cplusplus/papers/issues/1743",
+        "paper_url": "https://wg21.link/p2389",
+        "closed_at": "2024-07-04T15:44:37Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3168",
+        "title": "Give std::optional Range Support",
+        "url": "https://github.com/cplusplus/papers/issues/1831",
+        "paper_url": "https://wg21.link/p3168",
+        "closed_at": "2024-07-04T15:44:58Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3217",
+        "title": "Adjoints to \"Enabling list-initialization for algorithms\": find_last",
+        "url": "https://github.com/cplusplus/papers/issues/1866",
+        "paper_url": "https://wg21.link/p3217",
+        "closed_at": "2024-07-04T15:45:23Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2985",
+        "title": "A type trait for detecting virtual base classes",
+        "url": "https://github.com/cplusplus/papers/issues/1659",
+        "paper_url": "https://wg21.link/p2985",
+        "closed_at": "2024-07-04T15:45:45Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P0843",
+        "title": "inplace_vector",
+        "url": "https://github.com/cplusplus/papers/issues/114",
+        "paper_url": "https://wg21.link/p0843",
+        "closed_at": "2024-07-04T15:46:07Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2968",
+        "title": "Make std::ignore a first-class object",
+        "url": "https://github.com/cplusplus/papers/issues/1640",
+        "paper_url": "https://wg21.link/p2968",
+        "closed_at": "2024-07-04T15:47:51Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2075",
+        "title": "Philox as an extension of the C++ RNG engines",
+        "url": "https://github.com/cplusplus/papers/issues/802",
+        "paper_url": "https://wg21.link/p2075",
+        "closed_at": "2024-07-04T15:48:21Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3303",
+        "title": "Fixing Lazy Sender Algorithm Customization",
+        "url": "https://github.com/cplusplus/papers/issues/1954",
+        "paper_url": "https://wg21.link/p3303",
+        "closed_at": "2024-07-09T16:25:30Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2963",
+        "title": "Ordering of constraints involving fold expressions",
+        "url": "https://github.com/cplusplus/papers/issues/1638",
+        "paper_url": "https://wg21.link/p2963",
+        "closed_at": "2024-07-15T18:19:13Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3144",
+        "title": "Deleting a Pointer to an Incomplete Type Should be Ill-formed",
+        "url": "https://github.com/cplusplus/papers/issues/1796",
+        "paper_url": "https://wg21.link/p3144",
+        "closed_at": "2024-07-15T18:19:30Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2747",
+        "title": "constexpr placement new",
+        "url": "https://github.com/cplusplus/papers/issues/1438",
+        "paper_url": "https://wg21.link/p2747",
+        "closed_at": "2024-07-15T18:20:02Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3175",
+        "title": "Reconsidering the `std::execution::on` algorithm",
+        "url": "https://github.com/cplusplus/papers/issues/1838",
+        "paper_url": "https://wg21.link/p3175",
+        "closed_at": "2024-07-16T16:10:05Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3341",
+        "title": "C++ Standard Library Ready Issues to be moved in St Louis, Jun. 2024",
+        "url": "https://github.com/cplusplus/papers/issues/2004",
+        "paper_url": "https://wg21.link/p3341",
+        "closed_at": "2024-07-17T09:18:59Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3187",
+        "title": "remove ensure_started and start_detached from P2300",
+        "url": "https://github.com/cplusplus/papers/issues/1853",
+        "paper_url": "https://wg21.link/p3187",
+        "closed_at": "2024-07-19T10:39:46Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
       }
     ]
   },
@@ -1087,207 +1193,240 @@
         "title": "Disallow Binding a Returned Glvalue to a Temporary",
         "url": "https://github.com/cplusplus/papers/issues/1439",
         "paper_url": "https://wg21.link/p2748",
-        "closed_at": "2024-04-15T11:27:57Z",
+        "closed_at": "2024-03-23T00:20:10Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3106",
         "title": "Clarifying rules for brace elision in aggregate initialization",
         "url": "https://github.com/cplusplus/papers/issues/1770",
         "paper_url": "https://wg21.link/p3106",
-        "closed_at": "2024-04-15T22:10:02Z",
+        "closed_at": "2024-03-23T00:21:00Z",
         "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P0609",
-        "title": "Attributes for Structured Bindings",
-        "url": "https://github.com/cplusplus/papers/issues/1233",
-        "paper_url": "https://wg21.link/p0609",
-        "closed_at": "2024-04-15T22:16:35Z",
-        "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3034",
         "title": "Module Declarations Shouldn't be Macros",
         "url": "https://github.com/cplusplus/papers/issues/1696",
         "paper_url": "https://wg21.link/p3034",
-        "closed_at": "2024-04-15T22:20:15Z",
+        "closed_at": "2024-03-23T00:21:14Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2809",
         "title": "Trivial infinite loops are not Undefined Behavior",
         "url": "https://github.com/cplusplus/papers/issues/1496",
         "paper_url": "https://wg21.link/p2809",
-        "closed_at": "2024-04-15T22:30:03Z",
+        "closed_at": "2024-03-23T00:21:37Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2795",
         "title": "Erroneous behaviour for uninitialized reads",
         "url": "https://github.com/cplusplus/papers/issues/1460",
         "paper_url": "https://wg21.link/p2795",
-        "closed_at": "2024-04-15T22:50:16Z",
+        "closed_at": "2024-03-23T00:22:10Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P0609",
+        "title": "Attributes for Structured Bindings",
+        "url": "https://github.com/cplusplus/papers/issues/1233",
+        "paper_url": "https://wg21.link/p0609",
+        "closed_at": "2024-03-23T00:23:32Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2573",
         "title": "= delete(\"should have a reason\");",
         "url": "https://github.com/cplusplus/papers/issues/1229",
         "paper_url": "https://wg21.link/p2573",
-        "closed_at": "2024-04-15T23:22:10Z",
+        "closed_at": "2024-03-23T00:27:02Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2893",
         "title": "Variadic Friends",
         "url": "https://github.com/cplusplus/papers/issues/1567",
         "paper_url": "https://wg21.link/p2893",
-        "closed_at": "2024-04-15T23:34:07Z",
+        "closed_at": "2024-03-23T00:27:24Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2875",
         "title": "Undeprecate `polymorphic_allocator::destroy` For C++26",
         "url": "https://github.com/cplusplus/papers/issues/1530",
         "paper_url": "https://wg21.link/p2875",
-        "closed_at": "2024-04-16T00:00:38Z",
+        "closed_at": "2024-03-23T00:30:41Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2867",
         "title": "Remove Deprecated strstreams From C++26",
         "url": "https://github.com/cplusplus/papers/issues/1523",
         "paper_url": "https://wg21.link/p2867",
-        "closed_at": "2024-04-16T00:23:06Z",
+        "closed_at": "2024-03-23T00:34:04Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2869",
         "title": "Remove Deprecated `shared_ptr` Atomic Access APIs From C++26",
         "url": "https://github.com/cplusplus/papers/issues/1525",
         "paper_url": "https://wg21.link/p2869",
-        "closed_at": "2024-04-16T00:49:02Z",
+        "closed_at": "2024-03-23T00:36:58Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2872",
         "title": "Remove `wstring_convert` From C++26",
         "url": "https://github.com/cplusplus/papers/issues/1528",
         "paper_url": "https://wg21.link/p2872",
-        "closed_at": "2024-04-16T08:13:43Z",
+        "closed_at": "2024-03-23T00:38:48Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P3107",
+        "title": "Permit an efficient implementation of std::print",
+        "url": "https://github.com/cplusplus/papers/issues/1771",
+        "paper_url": "https://wg21.link/p3107",
+        "closed_at": "2024-03-23T00:39:40Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3142",
         "title": "Printing Blank Lines with println",
         "url": "https://github.com/cplusplus/papers/issues/1794",
         "paper_url": "https://wg21.link/p3142",
-        "closed_at": "2024-04-16T09:16:38Z",
+        "closed_at": "2024-03-23T00:40:12Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2845",
         "title": "Formatting of std::filesystem::path",
         "url": "https://github.com/cplusplus/papers/issues/1516",
         "paper_url": "https://wg21.link/p2845",
-        "closed_at": "2024-04-16T09:59:25Z",
+        "closed_at": "2024-03-23T00:40:48Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P0493",
         "title": "Atomic maximum/minimum",
         "url": "https://github.com/cplusplus/papers/issues/866",
         "paper_url": "https://wg21.link/p0493",
-        "closed_at": "2024-04-16T10:34:42Z",
+        "closed_at": "2024-03-23T00:41:20Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2542",
         "title": "views::concat",
         "url": "https://github.com/cplusplus/papers/issues/1204",
         "paper_url": "https://wg21.link/p2542",
-        "closed_at": "2024-04-16T10:50:57Z",
+        "closed_at": "2024-03-23T00:41:47Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2591",
         "title": "Concatenation of strings and string views",
         "url": "https://github.com/cplusplus/papers/issues/1249",
         "paper_url": "https://wg21.link/p2591",
-        "closed_at": "2024-04-16T10:53:12Z",
+        "closed_at": "2024-03-23T00:42:24Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2248",
         "title": "Enabling list-initialization for algorithms",
         "url": "https://github.com/cplusplus/papers/issues/944",
         "paper_url": "https://wg21.link/p2248",
-        "closed_at": "2024-04-16T10:59:13Z",
+        "closed_at": "2024-03-23T00:42:54Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2810",
         "title": "is_debugger_present is_replaceable",
         "url": "https://github.com/cplusplus/papers/issues/1487",
         "paper_url": "https://wg21.link/p2810",
-        "closed_at": "2024-04-16T11:37:02Z",
+        "closed_at": "2024-03-23T00:43:31Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P1068",
         "title": "Vector API for random number generation",
         "url": "https://github.com/cplusplus/papers/issues/409",
         "paper_url": "https://wg21.link/p1068",
-        "closed_at": "2024-04-16T11:38:22Z",
+        "closed_at": "2024-03-23T00:44:04Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2944",
         "title": "Comparisons for reference_wrapper",
         "url": "https://github.com/cplusplus/papers/issues/1608",
         "paper_url": "https://wg21.link/p2944",
-        "closed_at": "2024-04-16T11:54:43Z",
+        "closed_at": "2024-03-23T00:53:58Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2642",
         "title": "Padded mdspan layouts",
         "url": "https://github.com/cplusplus/papers/issues/1308",
         "paper_url": "https://wg21.link/p2642",
-        "closed_at": "2024-04-16T11:59:56Z",
+        "closed_at": "2024-03-23T00:54:35Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P3029",
         "title": "Better mdspan's CTAD",
         "url": "https://github.com/cplusplus/papers/issues/1710",
         "paper_url": "https://wg21.link/p3029",
-        "closed_at": "2024-04-16T12:01:12Z",
+        "closed_at": "2024-03-23T00:55:02Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       }
     ]
   },
@@ -1296,247 +1435,224 @@
     "meeting_date": "2023-11",
     "papers": [
       {
-        "number": "CWG2733",
-        "title": "Applying [[maybe_unused]] to a label ",
-        "url": "https://github.com/cplusplus/papers/issues/1585",
-        "paper_url": "https://wg21.link/cwg2733",
-        "closed_at": "2023-12-17T00:33:44Z",
-        "category": "Core Defect Report",
-        "target": "C++26"
-      },
-      {
-        "number": "P2308",
-        "title": "Template parameter initialization",
-        "url": "https://github.com/cplusplus/papers/issues/1469",
-        "paper_url": "https://wg21.link/p2308",
-        "closed_at": "2023-12-17T00:53:26Z",
-        "category": "Core Language",
-        "target": "C++26"
-      },
-      {
-        "number": "P2662",
-        "title": "Pack Indexing",
-        "url": "https://github.com/cplusplus/papers/issues/1329",
-        "paper_url": "https://wg21.link/p2662",
-        "closed_at": "2023-12-17T01:59:30Z",
-        "category": "Core Language",
-        "target": "C++26"
+        "number": "P1673",
+        "title": "A free function linear algebra interface based on the BLAS",
+        "url": "https://github.com/cplusplus/papers/issues/557",
+        "paper_url": "https://wg21.link/p1673",
+        "closed_at": "2023-11-14T13:13:07Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2864",
         "title": "Remove Deprecated Arithmetic Conversion on Enumerations From C++26",
         "url": "https://github.com/cplusplus/papers/issues/1554",
         "paper_url": "https://wg21.link/p2864",
-        "closed_at": "2023-12-17T02:20:06Z",
+        "closed_at": "2023-11-15T17:34:29Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2662",
+        "title": "Pack Indexing",
+        "url": "https://github.com/cplusplus/papers/issues/1329",
+        "paper_url": "https://wg21.link/p2662",
+        "closed_at": "2023-11-16T20:00:07Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2308",
+        "title": "Template parameter initialization",
+        "url": "https://github.com/cplusplus/papers/issues/1469",
+        "paper_url": "https://wg21.link/p2308",
+        "closed_at": "2023-11-16T20:00:22Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "CWG2733",
+        "title": "Applying [[maybe_unused]] to a label ",
+        "url": "https://github.com/cplusplus/papers/issues/1585",
+        "paper_url": "https://wg21.link/cwg2733",
+        "closed_at": "2023-11-16T21:38:31Z",
+        "category": "Core Defect Report",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P0543",
         "title": "Saturation arithmetic",
         "url": "https://github.com/cplusplus/papers/issues/1218",
         "paper_url": "https://wg21.link/p0543",
-        "closed_at": "2023-12-17T14:14:19Z",
+        "closed_at": "2023-12-17T15:41:27Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2407",
         "title": "Freestanding Library: Partial Classes",
         "url": "https://github.com/cplusplus/papers/issues/1077",
         "paper_url": "https://wg21.link/p2407",
-        "closed_at": "2023-12-17T15:01:36Z",
+        "closed_at": "2023-12-17T15:42:13Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2546",
         "title": "Debugging Support",
         "url": "https://github.com/cplusplus/papers/issues/1207",
         "paper_url": "https://wg21.link/p2546",
-        "closed_at": "2023-12-17T15:29:55Z",
+        "closed_at": "2023-12-17T15:42:41Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2905",
         "title": "Runtime format strings",
         "url": "https://github.com/cplusplus/papers/issues/1578",
         "paper_url": "https://wg21.link/p2905",
-        "closed_at": "2023-12-17T15:31:21Z",
+        "closed_at": "2023-12-17T15:43:01Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2918",
         "title": "Runtime format strings II",
         "url": "https://github.com/cplusplus/papers/issues/1598",
         "paper_url": "https://wg21.link/p2918",
-        "closed_at": "2023-12-17T15:44:34Z",
+        "closed_at": "2023-12-17T15:43:32Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2909",
         "title": "Fix formatting of code units as integers (Dude, where's my char?)",
         "url": "https://github.com/cplusplus/papers/issues/1621",
         "paper_url": "https://wg21.link/p2909",
-        "closed_at": "2023-12-17T15:45:38Z",
+        "closed_at": "2023-12-17T15:43:50Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2447",
         "title": "std::span over an initializer list",
         "url": "https://github.com/cplusplus/papers/issues/1118",
         "paper_url": "https://wg21.link/p2447",
-        "closed_at": "2023-12-17T15:56:02Z",
+        "closed_at": "2023-12-17T15:44:27Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2821",
         "title": "span.at()",
         "url": "https://github.com/cplusplus/papers/issues/1501",
         "paper_url": "https://wg21.link/p2821",
-        "closed_at": "2023-12-17T16:00:46Z",
+        "closed_at": "2023-12-17T15:44:49Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2868",
         "title": "Remove Deprecated `std::allocator` Typedef From C++26",
         "url": "https://github.com/cplusplus/papers/issues/1524",
         "paper_url": "https://wg21.link/p2868",
-        "closed_at": "2023-12-17T16:32:31Z",
+        "closed_at": "2023-12-17T15:45:14Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2870",
         "title": "Remove `basic_string::reserve()` From C++26",
         "url": "https://github.com/cplusplus/papers/issues/1526",
         "paper_url": "https://wg21.link/p2870",
-        "closed_at": "2023-12-17T16:45:02Z",
+        "closed_at": "2023-12-17T15:45:30Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2871",
         "title": "Remove Deprecated Unicode Conversion Facets From C++26",
         "url": "https://github.com/cplusplus/papers/issues/1527",
         "paper_url": "https://wg21.link/p2871",
-        "closed_at": "2023-12-17T17:09:11Z",
+        "closed_at": "2023-12-17T15:46:01Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2819",
         "title": "Add tuple protocol to complex",
         "url": "https://github.com/cplusplus/papers/issues/1500",
         "paper_url": "https://wg21.link/p2819",
-        "closed_at": "2023-12-17T17:22:33Z",
+        "closed_at": "2023-12-17T15:46:26Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2937",
         "title": "Freestanding: Remove strtok",
         "url": "https://github.com/cplusplus/papers/issues/1605",
         "paper_url": "https://wg21.link/p2937",
-        "closed_at": "2023-12-17T17:24:37Z",
+        "closed_at": "2023-12-17T15:46:41Z",
         "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2836",
-        "title": "std::basic_const_iterator should follow its underlying type's convertibility",
-        "url": "https://github.com/cplusplus/papers/issues/1509",
-        "paper_url": "https://wg21.link/p2836",
-        "closed_at": "2023-12-17T18:31:59Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2264",
-        "title": "Make assert() macro user friendly for C and C++",
-        "url": "https://github.com/cplusplus/papers/issues/957",
-        "paper_url": "https://wg21.link/p2264",
-        "closed_at": "2023-12-17T22:55:07Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P1673",
-        "title": "A free function linear algebra interface based on the BLAS",
-        "url": "https://github.com/cplusplus/papers/issues/557",
-        "paper_url": "https://wg21.link/p1673",
-        "closed_at": "2023-12-18T02:48:25Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
-      },
-      {
-        "number": "P3040",
-        "title": "C++ Standard Library Ready Issues to be moved in Kona, Nov. 2023",
-        "url": "https://github.com/cplusplus/papers/issues/1714",
-        "paper_url": "https://wg21.link/p3040",
-        "closed_at": "2023-12-19T17:14:15Z",
-        "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2833",
         "title": "Freestanding Library: inout expected span",
         "url": "https://github.com/cplusplus/papers/issues/1508",
         "paper_url": "https://wg21.link/p2833",
-        "closed_at": "2024-03-05T14:15:32Z",
+        "closed_at": "2023-12-17T15:46:55Z",
         "category": "Other / Uncategorized",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
-        "number": "P2757",
-        "title": "Type checking format args",
-        "url": "https://github.com/cplusplus/papers/issues/1444",
-        "paper_url": "https://wg21.link/p2757",
-        "closed_at": "2024-03-05T14:17:03Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
+        "number": "P2836",
+        "title": "std::basic_const_iterator should follow its underlying type's convertibility",
+        "url": "https://github.com/cplusplus/papers/issues/1509",
+        "paper_url": "https://wg21.link/p2836",
+        "closed_at": "2023-12-17T15:51:04Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
-        "number": "P2637",
-        "title": "Member visit",
-        "url": "https://github.com/cplusplus/papers/issues/1303",
-        "paper_url": "https://wg21.link/p2637",
-        "closed_at": "2024-03-05T14:17:43Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
+        "number": "P2264",
+        "title": "Make assert() macro user friendly for C and C++",
+        "url": "https://github.com/cplusplus/papers/issues/957",
+        "paper_url": "https://wg21.link/p2264",
+        "closed_at": "2023-12-17T15:51:25Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
-        "number": "P1901",
-        "title": "Enabling the Use of weak_ptr as Keys in Unordered Associative Containers",
-        "url": "https://github.com/cplusplus/papers/issues/649",
-        "paper_url": "https://wg21.link/p1901",
-        "closed_at": "2024-03-05T14:18:35Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
-      },
-      {
-        "number": "P1759",
-        "title": "Native handles and file streams",
-        "url": "https://github.com/cplusplus/papers/issues/516",
-        "paper_url": "https://wg21.link/p1759",
-        "closed_at": "2024-03-05T14:19:52Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
-      },
-      {
-        "number": "P0792",
-        "title": "function_ref: a non-owning reference to a Callable",
-        "url": "https://github.com/cplusplus/papers/issues/256",
-        "paper_url": "https://wg21.link/p0792",
-        "closed_at": "2024-03-05T14:20:39Z",
-        "category": "Other / Uncategorized",
-        "target": "C++26"
+        "number": "P3040",
+        "title": "C++ Standard Library Ready Issues to be moved in Kona, Nov. 2023",
+        "url": "https://github.com/cplusplus/papers/issues/1714",
+        "paper_url": "https://wg21.link/p3040",
+        "closed_at": "2023-12-19T17:14:34Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       }
     ]
   },
@@ -1549,207 +1665,360 @@
         "title": "UB? In my Lexer?",
         "url": "https://github.com/cplusplus/papers/issues/1283",
         "paper_url": "https://wg21.link/p2621",
-        "closed_at": "2023-07-16T12:08:47Z",
+        "closed_at": "2023-06-17T06:10:19Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P1854",
         "title": "Conversion to literal encoding should not lead to loss of meaning",
         "url": "https://github.com/cplusplus/papers/issues/608",
         "paper_url": "https://wg21.link/p1854",
-        "closed_at": "2023-07-16T12:33:31Z",
+        "closed_at": "2023-06-17T06:10:57Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2361",
         "title": "Unevaluated string literals",
         "url": "https://github.com/cplusplus/papers/issues/1035",
         "paper_url": "https://wg21.link/p2361",
-        "closed_at": "2023-07-16T12:41:51Z",
+        "closed_at": "2023-06-17T06:13:15Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2558",
         "title": "Add @, $, and ` to the basic character set",
         "url": "https://github.com/cplusplus/papers/issues/1220",
         "paper_url": "https://wg21.link/p2558",
-        "closed_at": "2023-07-16T13:07:07Z",
+        "closed_at": "2023-06-17T06:13:15Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2738",
         "title": "constexpr cast from void*: towards constexpr type-erasure",
         "url": "https://github.com/cplusplus/papers/issues/1431",
         "paper_url": "https://wg21.link/p2738",
-        "closed_at": "2023-07-16T13:10:22Z",
+        "closed_at": "2023-06-17T06:13:16Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2552",
         "title": "On the ignorability of standard attributes",
         "url": "https://github.com/cplusplus/papers/issues/1212",
         "paper_url": "https://wg21.link/p2552",
-        "closed_at": "2023-07-16T13:28:41Z",
+        "closed_at": "2023-06-17T06:14:31Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2752",
         "title": "Static storage for braced initializers",
         "url": "https://github.com/cplusplus/papers/issues/1442",
         "paper_url": "https://wg21.link/p2752",
-        "closed_at": "2023-07-16T21:18:51Z",
+        "closed_at": "2023-06-17T06:15:09Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2741",
         "title": "user-generated static_assert messages",
         "url": "https://github.com/cplusplus/papers/issues/1434",
         "paper_url": "https://wg21.link/p2741",
-        "closed_at": "2023-07-16T21:36:06Z",
+        "closed_at": "2023-06-17T06:15:45Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2169",
         "title": "A Nice Placeholder With No Name",
         "url": "https://github.com/cplusplus/papers/issues/878",
         "paper_url": "https://wg21.link/p2169",
-        "closed_at": "2023-07-16T21:52:21Z",
+        "closed_at": "2023-06-17T06:16:17Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2497",
         "title": "Testing for success or failure of <charconv> functions",
         "url": "https://github.com/cplusplus/papers/issues/1454",
         "paper_url": "https://wg21.link/p2497",
-        "closed_at": "2023-07-16T22:17:35Z",
+        "closed_at": "2023-06-17T06:20:13Z",
         "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2592",
-        "title": "Hashing support for std::chrono value classes",
-        "url": "https://github.com/cplusplus/papers/issues/1250",
-        "paper_url": "https://wg21.link/p2592",
-        "closed_at": "2023-07-16T22:23:05Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2587",
-        "title": "to_string or not to_string",
-        "url": "https://github.com/cplusplus/papers/issues/1245",
-        "paper_url": "https://wg21.link/p2587",
-        "closed_at": "2023-07-18T22:19:10Z",
-        "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2562",
         "title": "constexpr Stable Sorting",
         "url": "https://github.com/cplusplus/papers/issues/1222",
         "paper_url": "https://wg21.link/p2562",
-        "closed_at": "2023-07-18T22:20:44Z",
+        "closed_at": "2023-06-17T06:22:29Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
-        "number": "P2545",
-        "title": "Why RCU Should be in C++26",
-        "url": "https://github.com/cplusplus/papers/issues/1206",
-        "paper_url": "https://wg21.link/p2545",
-        "closed_at": "2023-07-19T23:27:08Z",
+        "number": "P2587",
+        "title": "to_string or not to_string",
+        "url": "https://github.com/cplusplus/papers/issues/1245",
+        "paper_url": "https://wg21.link/p2587",
+        "closed_at": "2023-06-17T06:22:29Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2592",
+        "title": "Hashing support for std::chrono value classes",
+        "url": "https://github.com/cplusplus/papers/issues/1250",
+        "paper_url": "https://wg21.link/p2592",
+        "closed_at": "2023-06-17T06:22:30Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2530",
         "title": "Why Hazard Pointers should be in C++26",
         "url": "https://github.com/cplusplus/papers/issues/1194",
         "paper_url": "https://wg21.link/p2530",
-        "closed_at": "2023-07-21T00:41:51Z",
+        "closed_at": "2023-06-17T06:23:19Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2538",
         "title": "ADL-proof std::projected",
         "url": "https://github.com/cplusplus/papers/issues/1201",
         "paper_url": "https://wg21.link/p2538",
-        "closed_at": "2023-07-21T00:53:35Z",
+        "closed_at": "2023-06-17T06:23:20Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2545",
+        "title": "Why RCU Should be in C++26",
+        "url": "https://github.com/cplusplus/papers/issues/1206",
+        "paper_url": "https://wg21.link/p2545",
+        "closed_at": "2023-06-17T06:23:20Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2495",
         "title": "Interfacing stringstreams with string_view",
         "url": "https://github.com/cplusplus/papers/issues/1190",
         "paper_url": "https://wg21.link/p2495",
-        "closed_at": "2023-07-21T01:00:47Z",
+        "closed_at": "2023-06-17T06:24:46Z",
         "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2510",
-        "title": "Formatting pointers",
-        "url": "https://github.com/cplusplus/papers/issues/1165",
-        "paper_url": "https://wg21.link/p2510",
-        "closed_at": "2023-07-21T01:06:13Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2198",
-        "title": "Freestanding Feature-Test Macros and Implementation-Defined Extensions",
-        "url": "https://github.com/cplusplus/papers/issues/1070",
-        "paper_url": "https://wg21.link/p2198",
-        "closed_at": "2023-07-21T01:25:46Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2338",
-        "title": "Freestanding Library: Character primitives and the C library",
-        "url": "https://github.com/cplusplus/papers/issues/1017",
-        "paper_url": "https://wg21.link/p2338",
-        "closed_at": "2023-07-21T10:14:11Z",
-        "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2013",
         "title": "Freestanding Language: Optional ::operator new",
         "url": "https://github.com/cplusplus/papers/issues/749",
         "paper_url": "https://wg21.link/p2013",
-        "closed_at": "2023-07-21T10:58:33Z",
+        "closed_at": "2023-06-17T06:27:09Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2338",
+        "title": "Freestanding Library: Character primitives and the C library",
+        "url": "https://github.com/cplusplus/papers/issues/1017",
+        "paper_url": "https://wg21.link/p2338",
+        "closed_at": "2023-06-17T06:27:10Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2198",
+        "title": "Freestanding Feature-Test Macros and Implementation-Defined Extensions",
+        "url": "https://github.com/cplusplus/papers/issues/1070",
+        "paper_url": "https://wg21.link/p2198",
+        "closed_at": "2023-06-17T06:27:11Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2510",
+        "title": "Formatting pointers",
+        "url": "https://github.com/cplusplus/papers/issues/1165",
+        "paper_url": "https://wg21.link/p2510",
+        "closed_at": "2023-06-17T06:27:11Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P1901",
+        "title": "Enabling the Use of weak_ptr as Keys in Unordered Associative Containers",
+        "url": "https://github.com/cplusplus/papers/issues/649",
+        "paper_url": "https://wg21.link/p1901",
+        "closed_at": "2023-06-17T06:31:13Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2363",
         "title": "Extending associative containers with the remaining heterogeneous overloads",
         "url": "https://github.com/cplusplus/papers/issues/1037",
         "paper_url": "https://wg21.link/p2363",
-        "closed_at": "2023-07-21T12:21:21Z",
+        "closed_at": "2023-06-17T06:31:13Z",
         "category": "Standard Library",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P0792",
+        "title": "function_ref: a non-owning reference to a Callable",
+        "url": "https://github.com/cplusplus/papers/issues/256",
+        "paper_url": "https://wg21.link/p0792",
+        "closed_at": "2023-06-17T06:33:53Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2874",
+        "title": "Mandating Annex D",
+        "url": "https://github.com/cplusplus/papers/issues/1557",
+        "paper_url": "https://wg21.link/p2874",
+        "closed_at": "2023-06-17T06:35:24Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2637",
+        "title": "Member visit",
+        "url": "https://github.com/cplusplus/papers/issues/1303",
+        "paper_url": "https://wg21.link/p2637",
+        "closed_at": "2023-06-17T06:37:28Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2641",
+        "title": "Checking if a union alternative is active",
+        "url": "https://github.com/cplusplus/papers/issues/1307",
+        "paper_url": "https://wg21.link/p2641",
+        "closed_at": "2023-06-17T06:37:29Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2757",
+        "title": "Type checking format args",
+        "url": "https://github.com/cplusplus/papers/issues/1444",
+        "paper_url": "https://wg21.link/p2757",
+        "closed_at": "2023-06-17T06:37:30Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P1383",
+        "title": "More constexpr for cmath and complex",
+        "url": "https://github.com/cplusplus/papers/issues/168",
+        "paper_url": "https://wg21.link/p1383",
+        "closed_at": "2023-06-17T06:41:04Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P1759",
+        "title": "Native handles and file streams",
+        "url": "https://github.com/cplusplus/papers/issues/516",
+        "paper_url": "https://wg21.link/p1759",
+        "closed_at": "2023-06-17T06:41:05Z",
+        "category": "Other / Uncategorized",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2697",
+        "title": "Interfacing bitset with string_view",
+        "url": "https://github.com/cplusplus/papers/issues/1387",
+        "paper_url": "https://wg21.link/p2697",
+        "closed_at": "2023-06-17T06:41:05Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2734",
+        "title": "Adding the new 2022 SI prefixes",
+        "url": "https://github.com/cplusplus/papers/issues/1427",
+        "paper_url": "https://wg21.link/p2734",
+        "closed_at": "2023-06-17T06:41:06Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2548",
+        "title": "copyable_function",
+        "url": "https://github.com/cplusplus/papers/issues/1275",
+        "paper_url": "https://wg21.link/p2548",
+        "closed_at": "2023-06-17T06:43:22Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2630",
+        "title": "Submdspan",
+        "url": "https://github.com/cplusplus/papers/issues/1293",
+        "paper_url": "https://wg21.link/p2630",
+        "closed_at": "2023-06-17T06:45:59Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
+      },
+      {
+        "number": "P2714",
+        "title": "Bind front and back to NTTP callables",
+        "url": "https://github.com/cplusplus/papers/issues/1419",
+        "paper_url": "https://wg21.link/p2714",
+        "closed_at": "2023-06-17T06:46:00Z",
+        "category": "Standard Library",
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P2915",
         "title": "Proposed resolution to CWG1223",
         "url": "https://github.com/cplusplus/papers/issues/1596",
         "paper_url": "https://wg21.link/p2915",
-        "closed_at": "2023-07-21T14:21:24Z",
+        "closed_at": "2023-07-21T14:21:42Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       },
       {
         "number": "P1885",
@@ -1758,79 +2027,8 @@
         "paper_url": "https://wg21.link/p1885",
         "closed_at": "2023-07-21T15:42:21Z",
         "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2874",
-        "title": "Mandating Annex D",
-        "url": "https://github.com/cplusplus/papers/issues/1557",
-        "paper_url": "https://wg21.link/p2874",
-        "closed_at": "2023-07-21T17:19:56Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2697",
-        "title": "Interfacing bitset with string_view",
-        "url": "https://github.com/cplusplus/papers/issues/1387",
-        "paper_url": "https://wg21.link/p2697",
-        "closed_at": "2023-07-21T21:13:18Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P1383",
-        "title": "More constexpr for cmath and complex",
-        "url": "https://github.com/cplusplus/papers/issues/168",
-        "paper_url": "https://wg21.link/p1383",
-        "closed_at": "2023-07-21T21:22:42Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2734",
-        "title": "Adding the new 2022 SI prefixes",
-        "url": "https://github.com/cplusplus/papers/issues/1427",
-        "paper_url": "https://wg21.link/p2734",
-        "closed_at": "2023-07-21T21:28:27Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2548",
-        "title": "copyable_function",
-        "url": "https://github.com/cplusplus/papers/issues/1275",
-        "paper_url": "https://wg21.link/p2548",
-        "closed_at": "2023-07-21T22:29:17Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2714",
-        "title": "Bind front and back to NTTP callables",
-        "url": "https://github.com/cplusplus/papers/issues/1419",
-        "paper_url": "https://wg21.link/p2714",
-        "closed_at": "2023-07-21T22:37:03Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2630",
-        "title": "Submdspan",
-        "url": "https://github.com/cplusplus/papers/issues/1293",
-        "paper_url": "https://wg21.link/p2630",
-        "closed_at": "2023-07-22T23:50:55Z",
-        "category": "Standard Library",
-        "target": "C++26"
-      },
-      {
-        "number": "P2641",
-        "title": "Checking if a union alternative is active",
-        "url": "https://github.com/cplusplus/papers/issues/1307",
-        "paper_url": "https://wg21.link/p2641",
-        "closed_at": "2023-10-16T09:59:55Z",
-        "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "state": "closed"
       }
     ]
   }
