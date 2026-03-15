@@ -6,10 +6,12 @@ import json
 import time
 import os
 import re
+import sys
 from datetime import datetime
 
 def fetch_approved_papers():
     papers = {}
+    github_token = os.environ.get('GITHUB_TOKEN')
     
     for target_std in ["C++26", "C++29"]:
         page = 1
@@ -20,12 +22,17 @@ def fetch_approved_papers():
             url = f"https://api.github.com/search/issues?q={urllib.parse.quote(query)}&per_page=100&page={page}"
             
             req = urllib.request.Request(url, headers={'User-Agent': 'Cpp-Tracker'})
+            if github_token:
+                req.add_header('Authorization', f'Bearer {github_token}')
             
             try:
                 with urllib.request.urlopen(req) as response:
                     data = json.loads(response.read().decode())
             except urllib.error.HTTPError as e:
                 print(f"HTTP Error: {e.code}")
+                if e.code == 403:
+                    print("Rate limit exceeded. Exiting to prevent baseline corruption.")
+                    sys.exit(1)
                 break
                 
             items = data.get('items', [])
@@ -68,7 +75,8 @@ def fetch_approved_papers():
                 break
                 
             page += 1
-            time.sleep(2) # Respect GitHub's unauthenticated rate limits
+            # Search API limits: 30/min authenticated, 10/min unauthenticated
+            time.sleep(2 if github_token else 6)
             
     return list(papers.values())
 
