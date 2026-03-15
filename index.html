@@ -281,7 +281,7 @@
                         <td style="white-space: nowrap;"><a href="${paper.paper_url}" target="_blank" rel="noopener noreferrer">${paper.number}</a></td>
                         <td>${escapeHTML(paper.title)}</td>
                         <td><span class="badge ${badgeClass}">${paper.category}</span></td>
-                        <td style="text-align: center;"><a href="${paper.url}" target="_blank" rel="noopener noreferrer" title="GitHub Issue">🐙</a></td>
+                        <td style="text-align: center;"><a href="${paper.url}" target="_blank" rel="noopener noreferrer" title="GitHub Issue" aria-label="GitHub Issue">🐙</a></td>
                     </tr>
                 `;
             }).join('');
