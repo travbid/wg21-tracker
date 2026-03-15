@@ -16,6 +16,7 @@
             --lib-badge: #d97706;
             --core-dr-badge: #0f766e;
             --lib-dr-badge: #c2410c;
+            --reversion-badge: #dc2626;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -30,6 +31,7 @@
                 --lib-badge: #fbbf24;
                 --core-dr-badge: #14b8a6;
                 --lib-dr-badge: #f97316;
+                --reversion-badge: #ef4444;
             }
         }
 
@@ -73,7 +75,9 @@
         .badge.library { background-color: var(--lib-badge); color: #000; }
         .badge.core-dr { background-color: var(--core-dr-badge); }
         .badge.lib-dr { background-color: var(--lib-dr-badge); color: #fff; }
-        .badge.graveyard { background-color: #ef4444; }
+        .badge.reverted { background-color: var(--meta-text); color: var(--bg); }
+        .badge.reversion { background-color: var(--reversion-badge); color: #fff; }
+        .reverted-row { opacity: 0.6; }
 
         .table-container {
             border: 1px solid var(--border);
@@ -132,11 +136,6 @@
             color: var(--meta-text);
         }
 
-        #graveyard-section {
-            margin-top: 4rem;
-            opacity: 0.8;
-            filter: grayscale(80%);
-        }
     </style>
 </head>
 <body>
@@ -151,13 +150,6 @@
             <p class="paper-meta" id="batch-date-info">Fetching latest data...</p>
         </div>
 
-        <section id="graveyard-section">
-            <h2>The Graveyard</h2>
-            <p class="paper-meta">Papers previously voted in, but formally reverted in this cycle.</p>
-            <div id="graveyard-container">
-                <p><em>No recent reversions detected.</em></p>
-            </div>
-        </section>
     </main>
 
     <script>
@@ -174,10 +166,7 @@
                     return;
                 }
 
-                const activeMeetings = data.filter(m => m.meeting_name !== 'Graveyard');
-                const graveyardMeeting = data.find(m => m.meeting_name === 'Graveyard');
-
-                container.innerHTML = activeMeetings.map(meeting => {
+                container.innerHTML = data.map(meeting => {
                     const sortByDR = (a, b) => {
                         const aIsDR = a.category.includes('Defect');
                         const bIsDR = b.category.includes('Defect');
@@ -237,18 +226,13 @@
                     `;
                 }).join('');
 
-                if (graveyardMeeting && graveyardMeeting.papers.length > 0) {
-                    document.getElementById('graveyard-container').innerHTML = 
-                        renderPapersTable(graveyardMeeting.papers, '', true);
-                }
-
             } catch (error) {
                 console.error("Failed to load or parse paper data:", error);
                 document.getElementById('meetings-container').innerHTML = `<span style="color: #ef4444;">Error loading data. Ensure 'cpp_status_baseline.json' is in the same directory.</span>`;
             }
         }
 
-        function renderPapersTable(papers, emptyMessage, isGraveyard = false) {
+        function renderPapersTable(papers, emptyMessage) {
             if (papers.length === 0) {
                 return `<p class="paper-meta"><em>${emptyMessage}</em></p>`;
             }
@@ -262,10 +246,18 @@
             };
 
             const rows = papers.map(paper => {
+                const isReverted = paper.status === 'reverted';
+                const isReversion = paper.status === 'reversion';
                 // Determine badge styling based on category
                 let badgeClass = '';
-                if (isGraveyard) {
-                    badgeClass = 'graveyard';
+                let badgeText = paper.category;
+
+                if (isReverted) {
+                    badgeClass = 'reverted';
+                    badgeText = 'Reverted';
+                } else if (isReversion) {
+                    badgeClass = 'reversion';
+                    badgeText = 'Reversion';
                 } else if (paper.category === 'Core Defect Report') {
                     badgeClass = 'core-dr';
                 } else if (paper.category === 'Library Defect Report') {
@@ -276,11 +268,26 @@
                     badgeClass = 'library';
                 }
 
+                const titleStyle = isReverted ? 'text-decoration: line-through;' : '';
+                
+                let noteHtml = '';
+                if (isReverted) {
+                    let revertLink = paper.reverted_by ? `<a href="https://wg21.link/${paper.reverted_by.toLowerCase()}" target="_blank" rel="noopener noreferrer">${paper.reverted_by}</a>` : '';
+                    let text = revertLink ? `Reverted by ${revertLink}` : 'Reverted';
+                    if (paper.note) text += ` - ${escapeHTML(paper.note)}`;
+                    noteHtml = `<div style="font-size: 0.85rem; font-style: italic; margin-top: 0.25rem; text-decoration: none;">${text}</div>`;
+                } else if (isReversion && paper.note) {
+                    noteHtml = `<div style="font-size: 0.85rem; font-style: italic; margin-top: 0.25rem; color: var(--meta-text);">${escapeHTML(paper.note)}</div>`;
+                }
+
                 return `
-                    <tr>
+                    <tr class="${isReverted ? 'reverted-row' : ''}">
                         <td style="white-space: nowrap;"><a href="${paper.paper_url}" target="_blank" rel="noopener noreferrer">${paper.number}</a></td>
-                        <td>${escapeHTML(paper.title)}</td>
-                        <td><span class="badge ${badgeClass}">${paper.category}</span></td>
+                        <td>
+                            <div style="${titleStyle}">${escapeHTML(paper.title)}</div>
+                            ${noteHtml}
+                        </td>
+                        <td><span class="badge ${badgeClass}">${badgeText}</span></td>
                         <td style="text-align: center;"><a href="${paper.url}" target="_blank" rel="noopener noreferrer" title="GitHub Issue" aria-label="GitHub Issue">🐙</a></td>
                     </tr>
                 `;

@@ -10,7 +10,9 @@
         "paper_url": "https://wg21.link/p3920",
         "closed_at": "2025-12-13T18:07:38Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "status": "reversion",
+        "note": "Reverts P2786 (Trivial Relocatability)"
       },
       {
         "number": "P3868",
@@ -553,7 +555,10 @@
         "paper_url": "https://wg21.link/p2786",
         "closed_at": "2025-03-15T10:34:52Z",
         "category": "Core Language",
-        "target": "C++26"
+        "target": "C++26",
+        "status": "reverted",
+        "reverted_by": "P3920",
+        "note": "NB comment resolution (Kona 2025)"
       },
       {
         "number": "P1967",

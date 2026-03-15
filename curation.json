@@ -1,0 +1,13 @@
+{
+  "reverted": {
+    "P2786": {
+      "reverted_by": "P3920",
+      "note": "NB comment resolution (Kona 2025)"
+    }
+  },
+  "reversions": {
+    "P3920": {
+      "note": "Reverts P2786 (Trivial Relocatability)"
+    }
+  }
+}

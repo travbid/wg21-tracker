@@ -102,7 +102,23 @@ if __name__ == "__main__":
     ]
 
     all_papers = fetch_approved_papers()
-    
+
+    try:
+        with open('curation.json', 'r') as f:
+            curation_data = json.load(f)
+            reverted_papers = curation_data.get('reverted', {})
+            reversion_papers = curation_data.get('reversions', {})
+            for paper in all_papers:
+                if paper['number'] in reverted_papers:
+                    paper['status'] = 'reverted'
+                    paper['reverted_by'] = reverted_papers[paper['number']].get('reverted_by', '')
+                    paper['note'] = reverted_papers[paper['number']].get('note', '')
+                elif paper['number'] in reversion_papers:
+                    paper['status'] = 'reversion'
+                    paper['note'] = reversion_papers[paper['number']].get('note', '')
+    except FileNotFoundError:
+        pass
+
     # Create a dictionary to hold the papers for each batch
     batches = {
         name: {
@@ -152,7 +168,6 @@ if __name__ == "__main__":
             "papers": unassigned_papers
         })
 
-    # Load baseline JSON to compare and handle the Graveyard
     old_data = []
     try:
         with open('cpp_status_baseline.json', 'r') as f:
@@ -160,31 +175,13 @@ if __name__ == "__main__":
     except FileNotFoundError:
         pass
 
-    old_active_batches = [b for b in old_data if b.get("meeting_name") != "Graveyard"]
-    old_graveyard = next((b.get("papers", []) for b in old_data if b.get("meeting_name") == "Graveyard"), [])
-
-    old_active_papers = {p['number']: p for b in old_active_batches for p in b.get('papers', [])}
-    new_active_papers = {p['number']: p for b in final_data for p in b.get('papers', [])}
-
-    new_graveyard_papers = [p for num, p in old_active_papers.items() if num not in new_active_papers]
-    
-    combined_graveyard = old_graveyard + new_graveyard_papers
-
-    data_differs = old_data and (old_active_batches != final_data)
+    data_differs = old_data and (old_data != final_data)
 
     if data_differs:
         timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
         backup_filename = f"cpp_status_baseline-{timestamp}.json"
         os.rename('cpp_status_baseline.json', backup_filename)
         print(f"Changes detected. Backed up previous baseline to {backup_filename}")
-
-    if combined_graveyard:
-        combined_graveyard.sort(key=lambda p: (p.get('closed_at', ''), p['number']))
-        final_data.append({
-            "meeting_name": "Graveyard",
-            "meeting_date": "",
-            "papers": combined_graveyard
-        })
 
     with open('cpp_status_baseline.json', 'w') as f:
         json.dump(final_data, f, indent=2)
