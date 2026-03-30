@@ -1,5 +1,111 @@
 [
   {
+    "meeting_name": "Croydon 2026",
+    "meeting_date": "2026-03",
+    "papers": [
+      {
+        "number": "P3726",
+        "title": "Adjustments to Union Lifetime Rules",
+        "url": "https://github.com/cplusplus/papers/issues/2356",
+        "paper_url": "https://wg21.link/p3726",
+        "closed_at": "2026-03-28T09:49:43Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P3769",
+        "title": "Clarification of placement new deallocation",
+        "url": "https://github.com/cplusplus/papers/issues/2385",
+        "paper_url": "https://wg21.link/p3769",
+        "closed_at": "2026-03-28T09:49:43Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P3865",
+        "title": "Class template argument deduction (CTAD) for type template template parameters",
+        "url": "https://github.com/cplusplus/papers/issues/2469",
+        "paper_url": "https://wg21.link/p3865",
+        "closed_at": "2026-03-28T09:49:44Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P3924",
+        "title": "Fix inappropriate font choices for \"declaration\"",
+        "url": "https://github.com/cplusplus/papers/issues/2582",
+        "paper_url": "https://wg21.link/p3924",
+        "closed_at": "2026-03-28T09:49:44Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P4004",
+        "title": "Reconsider CWG 1395 \"Partial ordering of variadic templates reconsidered\"",
+        "url": "https://github.com/cplusplus/papers/issues/2640",
+        "paper_url": "https://wg21.link/p4004",
+        "closed_at": "2026-03-28T09:49:45Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P4026",
+        "title": "Core Issue 3123 'Global lookup for begin and end for expansion statements'",
+        "url": "https://github.com/cplusplus/papers/issues/2659",
+        "paper_url": "https://wg21.link/p4026",
+        "closed_at": "2026-03-28T09:49:45Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P4136",
+        "title": "#line is not in line with existing implementation",
+        "url": "https://github.com/cplusplus/papers/issues/2678",
+        "paper_url": "https://wg21.link/p4136",
+        "closed_at": "2026-03-28T09:49:45Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P3598",
+        "title": "`const`-ification of Splice Expressions",
+        "url": "https://github.com/cplusplus/papers/issues/2682",
+        "paper_url": "https://wg21.link/p3598",
+        "closed_at": "2026-03-28T09:49:46Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P4149",
+        "title": "Define \"immediate context\"",
+        "url": "https://github.com/cplusplus/papers/issues/2681",
+        "paper_url": "https://wg21.link/p4149",
+        "closed_at": "2026-03-28T09:49:46Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      },
+      {
+        "number": "P4143",
+        "title": "Constant evaluation when?",
+        "url": "https://github.com/cplusplus/papers/issues/2687",
+        "paper_url": "https://wg21.link/p4143",
+        "closed_at": "2026-03-28T09:49:47Z",
+        "category": "Core Language",
+        "target": "C++26",
+        "state": "open"
+      }
+    ]
+  },
+  {
     "meeting_name": "Kona 2025",
     "meeting_date": "2025-11",
     "papers": [
