@@ -61,7 +61,9 @@
         "closed_at": "2026-03-28T09:49:45Z",
         "category": "Core Language",
         "target": "C++26",
-        "state": "open"
+        "state": "open",
+        "status": "correction",
+        "note": "Corrects P1306"
       },
       {
         "number": "P4136",
@@ -71,7 +73,9 @@
         "closed_at": "2026-03-28T09:49:45Z",
         "category": "Core Language",
         "target": "C++26",
-        "state": "open"
+        "state": "open",
+        "status": "correction",
+        "note": "Corrects P3868"
       },
       {
         "number": "P3598",
@@ -117,7 +121,8 @@
         "closed_at": "2025-11-09T19:34:39Z",
         "category": "Core Language",
         "target": "C++26",
-        "state": "closed"
+        "state": "closed",
+        "note": "Corrected by P4136"
       },
       {
         "number": "P3684",
@@ -255,7 +260,8 @@
         "closed_at": "2025-06-21T06:47:54Z",
         "category": "Core Language",
         "target": "C++26",
-        "state": "closed"
+        "state": "closed",
+        "note": "Corrected by P4026"
       },
       {
         "number": "P3293",

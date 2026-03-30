@@ -272,12 +272,17 @@
                     let text = revertLink ? `Reverted by ${revertLink}` : 'Reverted';
                     if (paper.note) text += ` - ${escapeHTML(paper.note)}`;
                     noteHtml = `<div style="font-size: 0.85rem; font-style: italic; margin-top: 0.25rem; text-decoration: none;">${text}</div>`;
-                } else if (isReversion && paper.note) {
+                } else if (paper.note) {
                     noteHtml = `<div style="font-size: 0.85rem; font-style: italic; margin-top: 0.25rem; color: var(--meta-text);">${escapeHTML(paper.note)}</div>`;
                 }
 
+                const rowClasses = [
+                    isReverted ? 'reverted-row' : '',
+                    paper.status ? `status-${paper.status}` : ''
+                ].filter(Boolean).join(' ');
+
                 return `
-                    <tr class="${isReverted ? 'reverted-row' : ''}">
+                    <tr class="${rowClasses}">
                         <td style="white-space: nowrap;"><a href="${paper.paper_url}" target="_blank" rel="noopener noreferrer">${paper.number}</a></td>
                         <td>
                             <div style="${titleStyle}">${escapeHTML(paper.title)}</div>

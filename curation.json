@@ -9,5 +9,9 @@
     "P3920": {
       "note": "Reverts P2786 (Trivial Relocatability)"
     }
+  },
+  "corrections": {
+    "P4136": "P3868",
+    "P4026": "P1306"
   }
 }

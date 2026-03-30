@@ -161,20 +161,37 @@ if __name__ == "__main__":
 
     all_papers = fetch_approved_papers(cached_dates)
 
-    target_overrides = {}
     try:
         with open('curation.json', 'r') as f:
             curation_data = json.load(f)
             reverted_papers = curation_data.get('reverted', {})
             reversion_papers = curation_data.get('reversions', {})
+            corrections = curation_data.get('corrections', {})
+
+            # Build a reverse map for "corrected_by" notes
+            corrected_by_map = {}
+            for correcting_paper, original_paper in corrections.items():
+                if original_paper not in corrected_by_map:
+                    corrected_by_map[original_paper] = []
+                corrected_by_map[original_paper].append(correcting_paper)
+
             for paper in all_papers:
-                if paper['number'] in reverted_papers:
+                paper_num = paper['number']
+                if paper_num in reverted_papers:
                     paper['status'] = 'reverted'
-                    paper['reverted_by'] = reverted_papers[paper['number']].get('reverted_by', '')
-                    paper['note'] = reverted_papers[paper['number']].get('note', '')
-                elif paper['number'] in reversion_papers:
+                    paper['reverted_by'] = reverted_papers[paper_num].get('reverted_by', '')
+                    paper['note'] = reverted_papers[paper_num].get('note', '')
+                elif paper_num in reversion_papers:
                     paper['status'] = 'reversion'
-                    paper['note'] = reversion_papers[paper['number']].get('note', '')
+                    paper['note'] = reversion_papers[paper_num].get('note', '')
+                elif paper_num in corrections:
+                    paper['status'] = 'correction'
+                    paper['note'] = f"Corrects {corrections[paper_num]}"
+
+                if paper_num in corrected_by_map:
+                    correctors = ", ".join(sorted(corrected_by_map[paper_num]))
+                    correction_note = f"Corrected by {correctors}"
+                    paper['note'] = f"{paper.get('note', '')}; {correction_note}".lstrip('; ')
     except FileNotFoundError:
         pass
 
