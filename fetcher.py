@@ -37,6 +37,7 @@ def fetch_approved_papers(cached_dates):
         page = 1
         print(f"Fetching {target_std} data from GitHub API...")
         while True:
+            print(f'   Page {page}')
             # Search query: issues in target_std with plenary-approved label (open or closed)
             query = f"repo:cplusplus/papers label:{target_std} label:plenary-approved"
             url = f"https://api.github.com/search/issues?q={urllib.parse.quote(query)}&per_page=100&page={page}"
@@ -60,6 +61,7 @@ def fetch_approved_papers(cached_dates):
                 break
                 
             for issue in items:
+                print(f'      Issue {issue["number"]} {issue["title"]}')
                 labels = [lbl['name'] for lbl in issue.get('labels', [])]
                 
                 paper_number = issue['title'].split()[0]
@@ -68,16 +70,19 @@ def fetch_approved_papers(cached_dates):
                 clean_title = re.sub(r"^\S+(?:\s+R\d+)?\s+", "", issue['title'])
                 clean_title = html.unescape(clean_title)
                 
-                # Categorize based on WG tags
+                # Categorize based on WG tags. Note that defect reports can be
+                # P-numbered papers (not just CWG/LWG issues); these carry the
+                # GitHub "DR" label, e.g. P4101 is a Core DR against C++26.
+                is_dr = "DR" in labels
                 category = "Other / Uncategorized"
                 if paper_number.startswith('CWG'):
                     category = "Core Defect Report"
                 elif paper_number.startswith('LWG'):
                     category = "Library Defect Report"
                 elif "EWG" in labels or "CWG" in labels:
-                    category = "Core Language"
+                    category = "Core Defect Report" if is_dr else "Core Language"
                 elif "LEWG" in labels or "LWG" in labels:
-                    category = "Standard Library"
+                    category = "Library Defect Report" if is_dr else "Standard Library"
 
                 paper_link = f"https://wg21.link/{paper_number.lower()}"
                 
@@ -167,6 +172,7 @@ if __name__ == "__main__":
             reverted_papers = curation_data.get('reverted', {})
             reversion_papers = curation_data.get('reversions', {})
             corrections = curation_data.get('corrections', {})
+            defect_reports = curation_data.get('defect_reports', {})
 
             # Build a reverse map for "corrected_by" notes
             corrected_by_map = {}
@@ -192,6 +198,15 @@ if __name__ == "__main__":
                     correctors = ", ".join(sorted(corrected_by_map[paper_num]))
                     correction_note = f"Corrected by {correctors}"
                     paper['note'] = f"{paper.get('note', '')}; {correction_note}".lstrip('; ')
+
+                # Defect reports land in the current vehicle (e.g. C++29) but
+                # apply retroactively to an already-finalized standard. The
+                # GitHub labels can't express this, so it is curated by hand.
+                if paper_num in defect_reports:
+                    applies_to = defect_reports[paper_num]
+                    paper['applies_to'] = applies_to
+                    dr_note = f"Defect Report against {applies_to}"
+                    paper['note'] = f"{paper.get('note', '')}; {dr_note}".lstrip('; ')
     except FileNotFoundError:
         pass
 

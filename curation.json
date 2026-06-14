@@ -13,5 +13,17 @@
   "corrections": {
     "P4136": "P3868",
     "P4026": "P1306"
+  },
+  "defect_reports": {
+    "P2243": "C++26 and earlier",
+    "P2414": "C++11 and later",
+    "P2434": "C++26 and earlier",
+    "P3347": "C++26 and earlier",
+    "P3658": "C++26 and earlier",
+    "P3733": "C++23",
+    "P3847": "C++11 and later",
+    "P3899": "C++26 and earlier",
+    "P3950": "C++20 and later",
+    "P4101": "C++26"
   }
 }
